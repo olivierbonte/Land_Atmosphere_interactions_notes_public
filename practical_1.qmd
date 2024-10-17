@@ -25,13 +25,13 @@ Based on the right pane of @fig-atm_profile, also fill in the potential temperat
 <!--- Note that the jupyter conversion fails when you have empty cells in your table,
 therefore fill it up using &#8203; (a zero width space) --->
 ```
-| ​          | P: Pressure \[hPa\] | T: Absolute temperature \[K\] | theta: Potential temperature read \[K\] | theta: Potential temperature calculated \[K\] |
-|-----------|---------------------|-------------------------------|-----------------------------------------|-----------------------------------------------|
-| top, ABL  | ​                    | ​                              | ​                                        | ​                                              |
-| Parcel P1 | ​                    | ​                              | ​                                        | ​                                              |
-| Parcel P2 | ​                    | ​                              | ​                                        | ​                                              |
+| ​          | $P$: Pressure \[hPa\] | $T$: Absolute temperature \[K\] | $\theta$: Potential temperature read \[K\] | $\theta$: Potential temperature calculated \[K\] |
+|---|---|---|---|---|
+| top, ABL  | | ​| ​| |
+| Parcel P1 | | ​| ​| |
+| Parcel P2 | | ​| ​| |
 
-: Readings of atmospheric temperature profile @fig-atm_profile {#tbl-atm_profile}
+: Readings of atmospheric temperature profile @fig-atm_profile {#tbl-atm_profile .striped}
 
 ## Problem 2
 
@@ -103,7 +103,7 @@ As mentioned in the introductory slides, the goal of this practical is to explor
 | Cyclinic ($C$) | 1.0 | 0.001 | 0 |
 | Anti-cyclonic ($AC$) | 4.0 | 0.009 | 1e-5 |
 
-: Observed values for the three large-scale atmospheric forcing parameters for both cyclonic and anti-cyclonic conditions in the free troposphere {#tbl-free_tropo}
+: Observed values for the three large-scale atmospheric forcing parameters for both cyclonic and anti-cyclonic conditions in the free troposphere {#tbl-free_tropo .striped}
 
 ![Sketch of vertical profiles of $\theta$ for both cyclonic and anti-cyclonic conditions](figures/cyclonic_vs_anticyclonic.png){#fig-cycl_anticycl}
 
