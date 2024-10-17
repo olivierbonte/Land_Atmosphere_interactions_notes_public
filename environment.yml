@@ -1,0 +1,9 @@
+name: la_interactions_quarto
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - jupyterlab 
+  - pandas=2.2 
+  - matplotlib
