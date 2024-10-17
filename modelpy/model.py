@@ -185,8 +185,8 @@ class model:
         self.gammau     = self.input.gammau     # free atmosphere u-wind speed lapse rate [s-1]
         self.advu       = self.input.advu       # advection of u-wind [m s-2]
         
-        self.v          = self.input.v          # initial mixed-layer u-wind speed [m s-1]
-        self.dv         = self.input.dv         # initial u-wind jump at h [m s-1]
+        self.v          = self.input.v          # initial mixed-layer v-wind speed [m s-1]
+        self.dv         = self.input.dv         # initial v-wind jump at h [m s-1]
         self.gammav     = self.input.gammav     # free atmosphere v-wind speed lapse rate [s-1]
         self.advv       = self.input.advv       # advection of v-wind [m s-2]
  
@@ -837,7 +837,8 @@ class model:
         self.out.CO2[t]        = self.CO2
         self.out.dCO2[t]       = self.dCO2
         self.out.wCO2[t]       = self.wCO2  * fac
-        self.out.wCO2e[t]      = self.wCO2e * fac
+        if self.wCO2e is not None:
+            self.out.wCO2e[t]      = self.wCO2e * fac
         self.out.wCO2R[t]      = self.wCO2R * fac
         self.out.wCO2A[t]      = self.wCO2A * fac
 
@@ -888,6 +889,10 @@ class model:
         self.out.ac[t]         = self.ac
         self.out.M[t]          = self.M
         self.out.dz[t]         = self.dz_h
+        
+        self.out.wg[t]         = self.wg 
+        self.out.w2[t]         = self.w2 
+        self.out.Ts[t]         = self.Ts 
   
     # delete class variables to facilitate analysis in ipython
     def exitmodel(self):
@@ -1120,6 +1125,10 @@ class model_output:
         self.LEpot      = np.zeros(tsteps)    # potential evaporation [W m-2]
         self.LEref      = np.zeros(tsteps)    # reference evaporation at rs = rsmin / LAI [W m-2]
         self.G          = np.zeros(tsteps)    # ground heat flux [W m-2]
+        self.wg         = np.zeros(tsteps)    # volumetric water content top soil layer [m3 m-3]
+        self.wCO2       = np.zeros(tsteps)    # surface kinematic CO2 flux [ppm m s-1]
+        self.w2         = np.zeros(tsteps)    # volumetric water content deeper soil layer [m3 m-3]
+        self.Ts         = np.zeros(tsteps)    # surface temperature [K]
 
         # Mixed-layer top variables
         self.zlcl       = np.zeros(tsteps)    # lifting condensation level [m]
@@ -1159,11 +1168,11 @@ class model_input:
         self.advq       = None  # advection of moisture [kg kg-1 s-1]
         self.wq         = None  # surface kinematic moisture flux [kg kg-1 m s-1]
 
-        self.CO2        = None  # initial mixed-layer potential temperature [K]
-        self.dCO2       = None  # initial temperature jump at h [K]
-        self.gammaCO2   = None  # free atmosphere potential temperature lapse rate [K m-1]
-        self.advCO2     = None  # advection of heat [K s-1]
-        self.wCO2       = None  # surface kinematic heat flux [K m s-1]
+        self.CO2        = None  # mixed-layer CO2 [ppm]
+        self.dCO2       = None  # initial CO2 jump at h [ppm]
+        self.gammaCO2   = None  # free atmosphere CO2 lapse rate [ppm m-1] 
+        self.advCO2     = None  # advection of CO2 [ppm s-1]
+        self.wCO2       = None  # surface kinematic CO2 flux [ppm m s-1]
         
         self.sw_wind    = None  # prognostic wind switch
         self.u          = None  # initial mixed-layer u-wind speed [m s-1]
@@ -1171,8 +1180,8 @@ class model_input:
         self.gammau     = None  # free atmosphere u-wind speed lapse rate [s-1]
         self.advu       = None  # advection of u-wind [m s-2]
 
-        self.v          = None  # initial mixed-layer u-wind speed [m s-1]
-        self.dv         = None  # initial u-wind jump at h [m s-1]
+        self.v          = None  # initial mixed-layer v-wind speed [m s-1]
+        self.dv         = None  # initial v-wind jump at h [m s-1]
         self.gammav     = None  # free atmosphere v-wind speed lapse rate [s-1]
         self.advv       = None  # advection of v-wind [m s-2]
 
