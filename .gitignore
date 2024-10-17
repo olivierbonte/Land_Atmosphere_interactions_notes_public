@@ -1,1 +1,6 @@
 /.quarto/
+# Ignore everything in the _book folder
+_book/*
+
+# Except for PDF files
+!_book/*.pdf
