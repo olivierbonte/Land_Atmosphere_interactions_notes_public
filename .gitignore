@@ -4,3 +4,5 @@ _book/*
 
 # Except for PDF files
 !_book/*.pdf
+
+.ipynb_checkpoints/
