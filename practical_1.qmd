@@ -82,7 +82,11 @@ H = \rho c_p (\overline{w'\theta'})_s \\
 \end{split}
 $$
 
-where $\rho = 1.2$ kg/m$^3$ is the air density and $\lambda = 2.45e6$ J/kg the latent heat of vaporisation. Hint: use a programming language of your choice to perform the analysis.
+where $\rho = 1.2$ kg/m$^3$ is the air density and $\lambda = 2.45e6$ J/kg the latent heat of vaporisation.
+
+::: {.callout-tip}
+Use a programming language of your choice to perform the analysis.
+::: 
 
 <!-- For next year, let the students derive this formula of the covariance themsevles -->
 
@@ -134,13 +138,17 @@ Set up and run both experiments. Use the `Graph` option in the interactive windo
 
 By analyzing the evolution of $\Delta \theta$, find at which time step ($t_i$) $\Delta \theta$ starts increasing in the experiments. Describe the differences in the growth rate of $h$ and $\langle \theta \rangle$ before and after this time $t_i$ for both experiments. Use @eq-state_h and @eq-state_theta to support your discussion.
 
-Hint: save plots in the `Graph` interface in order to compare the temporal evolution of ABL variables against each other. Also include the plots later on in your report.
+::: {.callout-tip}
+Save plots in the `Graph` interface in order to compare the temporal evolution of ABL variables against each other. Also include the plots later on in your report.
+:::
 
 ### Task B
 
 Do you have a guess on why $\Delta \theta$ is first decreasing, and then starts increasing? Support your discussion with the dependencies between the variables given by @eq-state_jump.
 
-Hint: Exploring vertical profiles of $\langle \theta \rangle$ in `Graph` interface may help you find the answer.
+::: {.callout-tip}
+Exploring vertical profiles of $\langle \theta \rangle$ in `Graph` interface may help you find the answer.
+:::
 
 ### Task C
 
@@ -149,7 +157,9 @@ Summarise your conclusions about the influence of the larger morning temperature
 -   Positivie relationship between A and B: increase in A leads to increase in
 -   Negative relationship between A and B: decrease in A leads to increase in B.
 
-Hint: Look at the 3 main state equations to support the arrows you draw.
+::: {.callout-tip}
+Look at the 3 main state equations to support the arrows you draw.
+:::
 
 ![Feedback diagram illustrating the effect of large-scale forcing conditions on the evolution of the ABL. In squares, forcing parameters; in circles, time derivates of key state variables.](figures/feedback_diagram.png){#fig-feedback_diagram}
 
@@ -163,7 +173,9 @@ Using this knowledge, design two experiments to study the influence of larger fr
 
 Using @eq-state_h and @eq-state_jump to support your discussion, analyze the role of $\gamma_\theta$ in the boundary layer growth and temperature evolution.
 
-Hint: study vertical profiles in \`Graph´ interface for easier interpretation.
+::: {.callout-tip}
+Study vertical profiles in \`Graph´ interface for easier interpretation.
+:::
 
 ### Task B
 
@@ -199,7 +211,7 @@ What is the common effect of the changed large-scale forcing conditions on ABL g
 
 ### Task B
 
-We did not look specifically into the effect of clear sky conditions (typical for anti-cyclone) versus cloudy weather (typical for cyclone) on the evolution of the ABL height and temperature. Do you expect the change to a clear sky conditions to have a positive or negative effect on ABL growth and temperature? Why? --\>
+We did not look specifically into the effect of clear sky conditions (typical for anti-cyclone) versus cloudy weather (typical for cyclone) on the evolution of the ABL height and temperature. Do you expect the change to a clear sky conditions to have a positive or negative effect on ABL growth and temperature? Why? 
 
 ```{=html}
 <!-- ::: {.content-visible unless-profile="student"}
