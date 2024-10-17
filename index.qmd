@@ -1,0 +1,5 @@
+# Preface {.unnumbered}
+
+In these practicals, we will use computer simulations to quantitavely explore land-atmosphere interactions. For this purpose, we will use a spatially lumped model called the [CLASS (Chemistry Land-sufrace Atmosphere Soil Slab)](https://classmodel.github.io/), developed by Waegeningen University the Netherlands. The main purpose of the model, which simulates the diurnal evolution of the atmospheric boundary layer (ABL) is to allow for easy experimentation for learning about the soil-vegetation-atmosphere continuum. For more background information on the model, the reader is referred to the Atmospheric Boundary Layer handbook [@ABL_handbook].
+
+Throughout the text, variables are used consistent with how they were defined in the introductory slides of the practicals. Variables not mentioned during the introduction, are explicitly introducted in the text. Note that no text, including this one, is guaranteed to be free of mistakes or imperfections. If you were to encounter these, please don't hestitate to contact the author ([Olivier.Bonte@UGent.Be](mailto:Olivier.Bonte@Ugent.be)).

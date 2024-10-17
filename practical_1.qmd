@@ -1,0 +1,208 @@
+---
+title: "Practical 1: Atmospheric state and forcings"
+date: "2024-10-15"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+Before conducting experiments with CLASS, you are first tasked to perform some introductory analysis on ABL theory.
+
+## Problem 1: Observed atmospheric temperature profile
+
+The left panel of @fig-atm_profile illustrates a typical observed atmospheric temperature profile (red line) during the day with a well-mixed boundary layer formed as a result of daytime turbulent mixing. In the mixed ABL the temperature profile is nearly dry adiabatic, i.e. it closely follows the dry adiabatic lapse rate $\Gamma_D \approx -10$ K/km (see Theory L2.5). The ABL top is capped with a strong temperature inversion (increase of T with height).
+
+![Observed atmospheric profiles of absolute temperature (red line) and potential temperature (black line). Gray dashed lines indicate a temperature decrease corresponding to $\Gamma_d$. Blue squares indicate two coordinates on the temperature profile selected for the exercises](figures/observed_atmospheric_profile.png){#fig-atm_profile}
+
+### Task A
+
+Find the temperature inversion on @fig-atm_profile below (left panel) and note down in the @tbl-atm_profile the height (in pressure) of the ABL top and the absolute temperature (in Kelvin) corresponding to that ABL height. Also, identify the pressure and absolute temperature for the two air parcels, P1 and P2. Note, that in absolute terms, temperature in the atmosphere decreases with height, i.e $T_2 < T_{top,ABL} < T_1$.
+
+Based on the right pane of @fig-atm_profile, also fill in the potential temperature in the third column of @tbl-atm_profile
+
+```{=html}
+<!--- Note that the jupyter conversion fails when you have empty cells in your table,
+therefore fill it up using &#8203; (a zero width space) --->
+```
+| ​          | P: Pressure \[hPa\] | T: Absolute temperature \[K\] | theta: Potential temperature read \[K\] | theta: Potential temperature calculated \[K\] |
+|-----------|---------------------|-------------------------------|-----------------------------------------|-----------------------------------------------|
+| top, ABL  | ​                    | ​                              | ​                                        | ​                                              |
+| Parcel P1 | ​                    | ​                              | ​                                        | ​                                              |
+| Parcel P2 | ​                    | ​                              | ​                                        | ​                                              |
+
+: Readings of atmospheric temperature profile @fig-atm_profile {#tbl-atm_profile}
+
+## Problem 2
+
+The concept of potential temperature takes into account effects of compression or expansion on air parcel’s temperature, and hence, allows for a comparison of a parcel's buoyancy at any height. Use @eq-potential_temperature to calculate potential temperatures of the two parcels (P1 and P2) and the ABL top.
+
+$$
+\theta = T \left( \frac{p_0}{p} \right)^{R_d/c_p}
+$$ {#eq-potential_temperature}
+
+Note that $p_0$ is the reference surface pressure of 1000 hPa, $R_d = R/MW_{\text{dry,air}} = \frac{8.314 \text{ J/(K mol)}}{29e-3 \text{ kg/mol}} \approx 287 \text{ J/(K kg)}$ the gas constant of dry air and $c_p = 1013 \text{ J/(K kg)}$ the specific heat of dry air at constant pressure. For the derivation of @eq-potential_temperature, the reader is referred to the supplementary material of Theory L2, more specifically to the section *Vertical pressure and temperature gradients* of @Shuttleworh_terrestrial_hydromet.
+
+Complete the fourth column of @tbl-atm_profile with the three calculated $\theta$ values: at ABL height, and at parcels’ levels P1 and P2.
+
+### Task A
+
+Now, imagine that you (dry adiabatically) descend parcels P1 and P2 down to the same level, for example the surface. Using the notion and formula of potential temperature, answer the question: which parcel will be warmer and more buoyant, P1 or P2?
+
+### Task B
+
+Compare your findings with the profile of potential temperature in the right hand side of @fig-atm_profile. Explain now in your own words why it is said that the entrainment flux transports warmer air from the free troposphere (i.e. P2) down to the mixed ABL, even though absolute temperatures of free troposphere are colder than those of the ABL (i.e. $T_2 < T_{top,ABL} < T_1$)?
+
+## Problem 3
+
+Surface turbulent fluxes, $(\overline{w'\theta'})_s$ and $(\overline{w'q'})_s$, are called eddy-covariance fluxes, because they can be estimated as the amount of common variation between temperature and vertical velocity for the surface heat flux $(\overline{w'\theta'})_s$ or between humidity and vertical velocity for the surface moisture flux $(\overline{w'q'})_s$.
+
+Remember that for a generic turbulent variable $\psi$, Reynolds decomposition yields 
+$$
+\psi = \text{E}[\psi] + \psi' = \overline{\psi} + \psi'
+$$ 
+
+with $\text{E}[\psi] = \overline{\psi}$ the averaged value and $\psi'$ the random fluctuating part. In addition with the assumption of no mean veritcal wind velocity ($\bar{w} = 0$, see introdutory slides), it follows that: 
+
+$$
+\begin{split}
+\text{cov} [w \psi] = E[(w - \text{E}[w])(\psi - \text{E}[\psi])]  \\
+= E[w'\psi'] = \overline{w'\psi'}
+\end{split}
+$$
+
+### Task A
+
+Using measurements from an eddy-covariance sensor given in the Excel file `pract1_eddy_cov_data.xls`, calculate surface sensible ($H$) and latent heat ($λE$) fluxes. Note that latent and sensible heat fluxes are related to the eddy-covariance fluxes by the following relationship (see Theory L3.4):
+
+$$
+\begin{split}
+H = \rho c_p (\overline{w'\theta'})_s \\
+\lambda E = \rho \lambda (\overline{w'q'})_s
+\end{split}
+$$
+
+where $\rho = 1.2$ kg/m$^3$ is the air density and $\lambda = 2.45e6$ J/kg the latent heat of vaporisation. Hint: use a programming language of your choice to perform the analysis.
+
+<!-- For next year, let the students derive this formula of the covariance themsevles -->
+
+## Description of the changes in large-scale atmospheric forcing
+
+With the introductory analysis performed, it is now time to carry out sensitvity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see `CLASS_model_guide.pdf`. The model parameters are set to be representative if a site in the mid-latitude (approximately 50°N).
+
+As mentioned in the introductory slides, the goal of this practical is to explore what effect the changing synoptic situation over Central Europe, from cyclonic ($C$, low pressure) to anti-cyclonic ($AC$, high pressure) – typical for a drought onset conditions - has on the evolution of the ABL state during the day, primarily its (potential) temperature ($\theta$) and height ($h$).
+
+@tbl-free_tropo and @fig-cycl_anticycl summarise the change that have occured in the large-scale atmospheric forcing parameters in the free troposphere: ABL jump (inversion) ($\Delta \theta$ \[K\]), free tropospheric lapse rate ($\gamma_{\theta}$ \[K/m\]) and horizontal wind divergence ( $\nabla \cdot \mathbf{u}_h$ \[1/s\]).
+
+| | $\Delta \theta$: ABL jump (inversion) \[K\] | $\gamma_{\theta}$: Free tropospheric lapse rate \[K/m\] | $\nabla \cdot \mathbf{u}_h$: Horizontal wind divergence \[1/s\] |
+|---|---|---|---|
+| Cyclinic ($C$) | 1.0 | 0.001 | 0 |
+| Anti-cyclonic ($AC$) | 4.0 | 0.009 | 1e-5 |
+
+: Observed values for the three large-scale atmospheric forcing parameters for both cyclonic and anti-cyclonic conditions in the free troposphere {#tbl-free_tropo}
+
+![Sketch of vertical profiles of $\theta$ for both cyclonic and anti-cyclonic conditions](figures/cyclonic_vs_anticyclonic.png){#fig-cycl_anticycl}
+
+Before moving to the problems, the three considered governing equations as given in the introductory slides are repated: 
+$$
+\frac{\partial\left\langle\theta\right\rangle}{\partial t}=\frac{\left(\overline{w^\prime\theta^\prime}\right)_s-\left(\overline{w^\prime\theta^\prime}\right)_e}{h}
+$$ {#eq-state_theta}
+
+$$
+\frac{\partial h}{\partial t}= -\frac{(\overline{w'\theta'})_e}{\Delta \theta} + w_{s}=w_{e} + w_{s}
+$$ {#eq-state_h} 
+
+$$
+\frac{\partial\Delta\theta}{\partial t}=w_{e}\gamma_{\theta}-\frac{\partial\langle\theta\rangle}{\partial t}=\gamma_{\theta}\left(\frac{\partial h}{\partial t}-w_{s}\right)-\frac{\partial\langle\theta\rangle}{\partial t}
+$$ {#eq-state_jump}
+
+When writing down your answers to the problems, please use the equation numbers used above (@eq-state_theta, @eq-state_h and @eq-state_jump) to support your reasoning.
+
+## Problem 4 {#sec-problem_4}
+
+Start from investigating the influence of a stronger morning contrast between the cooler ABL and warmer free troposphere, i.e. larger morning inversion ($\Delta \theta(t_0) = \Delta \theta_0$). Note that there is a physical explanation for this larger morning inversion: in anti-cyclonic conditions, clear sky nights typically occur, which results in more cooling (via longwave outgoing radiation) during the night.
+
+Open the interactive window of CLASS model with its initial default set up. Under tab ´Basic´ make sure that only the mixed-layer module is activated; the diurnal cycle of surface fluxes is off, and all the moisture parameters (i.e. $q$, $\Delta q$, $\gamma_q$, $q_{adv}$ and $(\overline{w'q'})_s$) are set to zero for now. See the screen-shot in @fig-control_exp. This setup is your control experiment.
+
+![Control setup of the initial ABL state with activated mixed-layer module, assumption of a dry atmosphere, and constant surface heat flux during the day (i.e. no diurnal cycle)](figures/control_experiment.png){#fig-control_exp}
+
+Now set up two sensitivity experiments: one for a weak initial nocturnal inversion (experiment $WI$ with the inversion value $\Delta \theta_C$) and one for a strong initial nocturnal inversion (experiment $SI$ with the inversion value $\Delta \theta_{AC}$). Use the values from @tbl-free_tropo.
+
+Set up and run both experiments. Use the `Graph` option in the interactive window to plot and compare the results for the temporal evolution of $h$, $\langle \theta \rangle$ and $\Delta \theta$.
+
+### Task A
+
+By analyzing the evolution of $\Delta \theta$, find at which time step ($t_i$) $\Delta \theta$ starts increasing in the experiments. Describe the differences in the growth rate of $h$ and $\langle \theta \rangle$ before and after this time $t_i$ for both experiments. Use @eq-state_h and @eq-state_theta to support your discussion.
+
+Hint: save plots in the `Graph` interface in order to compare the temporal evolution of ABL variables against each other. Also include the plots later on in your report.
+
+### Task B
+
+Do you have a guess on why $\Delta \theta$ is first decreasing, and then starts increasing? Support your discussion with the dependencies between the variables given by @eq-state_jump.
+
+Hint: Exploring vertical profiles of $\langle \theta \rangle$ in `Graph` interface may help you find the answer.
+
+### Task C
+
+Summarise your conclusions about the influence of the larger morning temperature inversion on the evolution of the daytime ABL properties and fill out the feedback diagram in @fig-feedback_diagram below. Use solid lines with arrows to indicate positive relationships between any two variables, and dashed lines with arrows to show negative relationships. To clarify:
+
+-   Positivie relationship between A and B: increase in A leads to increase in
+-   Negative relationship between A and B: decrease in A leads to increase in B.
+
+Hint: Look at the 3 main state equations to support the arrows you draw.
+
+![Feedback diagram illustrating the effect of large-scale forcing conditions on the evolution of the ABL. In squares, forcing parameters; in circles, time derivates of key state variables.](figures/feedback_diagram.png){#fig-feedback_diagram}
+
+## Problem 5 {#sec-problem_5}
+
+Another important variable that changed with the onset of the high pressure system ($AC$) was $\gamma_\theta$. Under conditions characterized by a high pressure system, warm air is slowly transported downward by subsidence, increasing the stability of the free troposphere, i.e. resulting in larger values of $\gamma_\theta$.
+
+Using this knowledge, design two experiments to study the influence of larger free-tropospheric lapse rate (higher stability). Using the values provided in @tbl-free_tropo, consider conditions before the onset of an anticyclonic situation (experiment $LO$ with $\gamma_{\theta,C}$) and another after the onset of a persistent high pressure system (experiment $HI$ $\gamma_{\theta, AC}$). For the rest, use the same initial set up as in @sec-problem_4, i.e. no moisture in the ABL and no diurnal cycle for both fluxes. Perform the simulations and compare the evolution of $h$, $\langle \theta \rangle$, and $\Delta \theta$ for the two experiments.
+
+### Task A
+
+Using @eq-state_h and @eq-state_jump to support your discussion, analyze the role of $\gamma_\theta$ in the boundary layer growth and temperature evolution.
+
+Hint: study vertical profiles in \`Graph´ interface for easier interpretation.
+
+### Task B
+
+Does the effect of stronger morning inversion $\Delta \theta_0$ (from @sec-problem_4), and larger $\gamma_\theta$ (this exercise), act at similar or different time periods of the day on the evolution of $h$ and $\langle \theta \rangle$?
+
+### Task C
+
+Summarize the role of $\Delta \theta$ and $\gamma_\theta$ as capping (limiting) factors of the diurnal evolution of the boundary layer. Add these newly identified relationships into the feedback diagram in @fig-feedback_diagram.
+
+## Problem 6
+
+Analogously to the experiments in @sec-problem_4 and @sec-problem_5, explore the sensitivity of the ABL evolution to the strong large-scale atmospheric subsidence $w_s$ developed under high-pressure system (see @fig-cycl_anticycl). Remember from the introductory slides that $w_s = (\nabla \cdot \mathbf{u}_h) h$.
+
+Again starting from @fig-control_exp, set up two experiments: one with zero wind divergence, and another with the divergence given in @tbl-free_tropo for $AC$. As before, support your answers below with the main state equations.
+
+### Task A
+
+Compare the boundary layer characteristics ($\langle \theta \rangle$, $h$ and $\Delta \theta$) in the situation with and without subsidence.
+
+### Task B
+
+Summarize the effect of subsidence and complete the feedback diagram in @fig-feedback_diagram.
+
+## Summary
+
+In this first practical, you have investigated the change in large-scale synoptic situation from a cyclonic to anti-cyclonic one, which - if the high pressure system persists - will likely cause a multi-day drought. You identified three main large-scale atmospheric forcing parameters: subsidence ($w_s$), inversion ($\Delta \theta$) and atmospheric stability (as determined by $\gamma_\theta$), which have changed alongside the onset of the high pressure system. These factors will definitely influence daytime dynamics of the ABL, and in the long run, rainfall occurrence, surface water availability, temperature peaks and ecosystem productivity.
+
+Examine one more time the feedback diagram (@fig-feedback_diagram) you worked upon, and summarize the expected change in the ABL dynamics due to the established large-scale synoptic situation.
+
+### Task A
+
+What is the common effect of the changed large-scale forcing conditions on ABL growth? And on temperature?
+
+### Task B
+
+We did not look specifically into the effect of clear sky conditions (typical for anti-cyclone) versus cloudy weather (typical for cyclone) on the evolution of the ABL height and temperature. Do you expect the change to a clear sky conditions to have a positive or negative effect on ABL growth and temperature? Why? --\>
+
+```{=html}
+<!-- ::: {.content-visible unless-profile="student"}
+This content will appear ONLY if you don't render with the student version
+::: -->
+```

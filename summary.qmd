@@ -1,0 +1,9 @@
+# Summary
+
+To be filled in 
+
+Reminder: you can convert between `.ipynb` and `.qmd` using the instructions [here](https://quarto.org/docs/tools/jupyter-lab.html#converting-notebooks)
+
+Reminder 2: Render .qmd files to .ipynb files (by including ipynb as render format for notebooks), using profiles to distinquish between teachers and student. Install jupyterlab-quarto extension https://quarto.org/docs/tools/jupyter-lab-extension.html#installing-the-extension to make experience better! 
+
+

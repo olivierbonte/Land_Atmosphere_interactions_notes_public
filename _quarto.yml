@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "Land-Atmosphere Interactions: Praticals "
+  author: "Olivier Bonte"
+  date: "2042-10-15"
+  chapters:
+    - index.qmd
+    - practical_1.qmd
+    #- summary.qmd
+    - references.qmd
+  downloads: [pdf, epub]
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
+
