@@ -7,3 +7,4 @@ dependencies:
   - jupyterlab 
   - pandas=2.2 
   - matplotlib
+  - xlrd
