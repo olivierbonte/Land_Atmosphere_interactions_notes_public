@@ -6,3 +6,4 @@ _book/*
 !_book/*.pdf
 
 .ipynb_checkpoints/
+__pycache__
