@@ -8,3 +8,4 @@ dependencies:
   - pandas=2.2 
   - matplotlib
   - xlrd
+  - jupyter-cache 

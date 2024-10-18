@@ -23,11 +23,13 @@ format:
     code-overflow: wrap
   pdf:
     documentclass: scrreprt
-include-in-header: 
-  text: |
-    \usepackage{fvextra}
-    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+    include-in-header: 
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 
-
+# Allows caching of notebooks when previewing 
+execute:
+  cache: true
 
 
