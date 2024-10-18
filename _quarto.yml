@@ -20,8 +20,13 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    code-overflow: wrap
   pdf:
     documentclass: scrreprt
+include-in-header: 
+  text: |
+    \usepackage{fvextra}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 
 
 
