@@ -171,7 +171,7 @@ Using this knowledge, design two experiments to study the influence of larger fr
 
 ### Task A
 
-Using @eq-state_h and @eq-state_jump to support your discussion, analyze the role of $\gamma_\theta$ in the boundary layer growth and temperature evolution.
+Using @eq-state_theta, @eq-state_h and @eq-state_jump to support your discussion, analyze the role of $\gamma_\theta$ in the boundary layer growth and temperature evolution.
 
 ::: {.callout-tip}
 Study vertical profiles in \`Graph´ interface for easier interpretation.
