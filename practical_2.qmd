@@ -270,7 +270,7 @@ As a control experiment, $C$ from @sec-pract_2_problem_1 is used. The new experi
 ### Task B
 Once experiments $C$ and $WA$ are simulated, describe the diurnal variability of the $H$ and $\lambda E$ under these different $\langle \theta \rangle$ values. 
 
-Additionally, complete the feedback diagrams give in @fig-feedback_theta_1 and @fig-feedback_theta_2. Based on your results, which one is dominating in this case? 
+Additionally, complete the feedback diagrams give in @fig-feedback_theta_1 and @fig-feedback_theta_2. Remember that $VPD = e^* - e$ stands for vapour pressure deficit. Based on your results, which one is dominating in this case? 
 
 ::: {#fig-feedback_theta_1}
 ```{mermaid}
