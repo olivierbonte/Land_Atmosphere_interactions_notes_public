@@ -161,7 +161,23 @@ Summarise your conclusions about the influence of the larger morning temperature
 Look at the 3 main state equations to support the arrows you draw.
 :::
 
-![Feedback diagram illustrating the effect of large-scale forcing conditions on the evolution of the ABL. In squares, forcing parameters; in circles, time derivates of key state variables.](figures/feedback_diagram.png){#fig-feedback_diagram}
+::: {#fig-feedback_diagram}
+```{mermaid}
+flowchart TD
+  A(["$$\frac{\partial h}{\partial t}$$"])
+  B["$$\Delta \theta$$"]
+  C["$$\gamma_{\theta}$$"]
+  D["$$|w_s|$$"]
+  E(["$$\frac{\partial \langle \theta \rangle}{\partial t}$$"])
+
+  A ~~~ B & C & D
+  B & C & D ~~~ E
+
+  classDef largeFontSize font-size:22px;
+  class A,B,C,D,E largeFontSize;
+```
+Feedback diagram illustrating the effect of large-scale forcing conditions on the evolution of the ABL. In squares, forcing parameters; in round shapes, time derivatives of key state variables.
+:::
 
 ## Problem 5 {#sec-problem_5}
 
