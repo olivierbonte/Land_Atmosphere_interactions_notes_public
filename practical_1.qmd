@@ -85,7 +85,7 @@ Use a programming language of your choice to perform the analysis.
 
 ## Description of the changes in large-scale atmospheric forcing
 
-With the introductory analysis performed, it is now time to carry out sensitvity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see `CLASS_model_guide.pdf`. The model parameters are set to be representative if a site in the mid-latitude (approximately 50°N).
+With the introductory analysis performed, it is now time to carry out sensitvity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see [`CLASS_model_guide.pdf`](https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View). The model parameters are set to be representative if a site in the mid-latitude (approximately 50°N).
 
 As mentioned in the introductory slides, the goal of this practical is to explore what effect the changing synoptic situation over Central Europe, from cyclonic ($C$, low pressure) to anti-cyclonic ($AC$, high pressure) – typical for a drought onset conditions - has on the evolution of the ABL state during the day, primarily its (potential) temperature ($\theta$) and height ($h$).
 
@@ -143,12 +143,12 @@ Do you have a guess on why $\Delta \theta$ is first decreasing, and then starts 
 Exploring vertical profiles of $\langle \theta \rangle$ in `Graph` interface may help you find the answer.
 :::
 
-### Task C
+### Task C {#sec-feedback}
 
 Summarise your conclusions about the influence of the larger morning temperature inversion on the evolution of the daytime ABL properties and fill out the feedback diagram in @fig-feedback_diagram below. Use solid lines with arrows to indicate positive relationships between any two variables, and dashed lines with arrows to show negative relationships. To clarify:
 
--   Positivie relationship between A and B: increase in A leads to increase in
--   Negative relationship between A and B: decrease in A leads to increase in B.
+-   Positive relationship between A and B: increase in A leads to increase in
+-   Negative relationship between A and B: decrease in A leads to increase in B
 
 ::: {.callout-tip}
 Look at the 3 main state equations to support the arrows you draw.

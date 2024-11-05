@@ -21,8 +21,233 @@ More specifically, we'll focus on the difference in land cover and soil moisture
 | West Flanders | 0.18 | Short grass |
 | East Wallonia | 0.31 | Broadleaf trees |   
 
-: Observed values of volumetric soil moisture content ($w_1 = w_2$) and dominant vegetation type for two Belgian region {#tbl-surface_conditions}
+: Observed values of volumetric soil moisture content ($w_1 = w_2$) and dominant vegetation type for two Belgian region {#tbl-surface_conditions .striped}
 
 ### Task A
-Over the course of the practical, fill in following table. Test change. Test again
+
+Over the course of the practical, fill in @tbl-results. Remember that the evaporative fraction is defined as:
+$$
+EF = \frac{\lambda E}{R_n - G}
+$$
+with $\lambda E$ the latent heat flux,  $R_n$ the net surface radiation and $G$ the ground heat flux (all in W/m$^2$). The strength of the coupling between $EF$ and soil moisture ($SM$) is characterised by $\frac{dEF}{dSM}$.
+
+| Region | daily $EF$ | SM-EF coupling regime | Likelihood of heatwave |
+|---|---|---|---|
+| West Flanders | | |
+| East Wallonia | | | 
+
+: Temp {#tbl-results .striped}
+
+## Problem 1 {#sec-pract_2_problem_1}
+
+First, the effect of different moisture content in the soil will be investigated. This will be done by setting up a dry ($D$) and wet ($W$) experiment with identical land cover conditions. 
+
+To set up the experiments, start by opening the interactive window of CLASS model with its initial default setup. Then per tab, perform following changes:
+
+- `Basic`:
+    - $t$: from 12 to 10 h 
+    - Untick the box `Mixed-layer`. Remember from the introductory slides that the mixed layer model is disabled so that there is no feedback from atmosphere to the land (i.e. the effect of the land, soil moisture here, on the atmosphere is isolated)
+- `Rad/Geo`:
+    - Tick the box `Radiation`
+- `Surface`:
+    - Tick the box `Surface scheme`
+    - Tick the box `Surface layer`
+
+From the surface tab, one can see that for this first set of experiments, it is assumed that the dominant land cover is short grass and that the soil type is sandy loam. 
+
+Now set up thee different experiments. Remark that volumetric soil moisture in the upper layer ($w_1$) and lower layer ($w_2$) are denoted by $w_{\text{soil}1}$ and $w_{\text{soil}2}$ in the `Surface` tab of the CLASS user interface. The values are the initial $SM$ values at the beginning of the simulation:
+
+1. Dry ($D$): $w_1 = w_2 = 0.18$, $SM$ conditions reflective of West Flanders
+2. Wet ($W$): $w_1 = w_2 = 0.31$, $SM$ conditions reflective of East Wallonia 
+3. Control ($C$): $w_1 = w_2 = 0.21$
+
+Once the three experiments are run, exported the data following the instructions in [`CLASS_model_guide.pdf`](https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View) so that these can be analysed in a programming language of your choice (i.e. MATLAB, R or Python). Note that contrary to the naming convention in the theory, $R_n$ is denoted by $Q$ in CLASS.  
+
+### Task A
+
+For every major term in the surface energy balance (i.e. $R_n$, $G$, $\lambda E$ and $H$), build a graphic illustrating its temporal evolution for all three ($W$, $D$ and $C$) experiments. Label them properly and examine the differences in partitioning of the total energy $R_n$ into the ground heat flux, heat and moisture fluxes for various levels of soil moisture. Pay attention to the different value range on the graph axes when comparing the magnitudes of the energy balance components.
+
+### Task B
+
+Under which soil moisture conditions does most of the available energy at the surface ($R_n – G$) go into the heating the atmosphere? To moistening the atmosphere?
+
+::: {.callout-tip}
+When comparing the experiments, ignore the slight differences in the total energy $R_n$, i.e assume that $R_n$ is the same for all the experiments.
+::: 
+
+### Task C
+
+Calculate for each experiment the $EF$ parameter and plot its temporal evolution on a separate graphic for all three experiments.
+
+::: {.callout-tip}
+You may need to adjust the axis limits on your graph, since the boundary values of $EF$ are too high due to the negative values of the fluxes after/before night (sunrise).
+:::
+
+### Task D {#sec-daily_EF}
+Compare the graphs and discuss what percentage of the total energy available at the surface was used for evaporation or heat release in every experiment case on average? For that, calculate the daily $EF$ value for every experiment using its daily sums (or averages) of $\lambda E$, $R_n$ and $G$. 
+
+Based on this result, in which region, West Flanders or East Wallonia, would you expect larger increase in daytime air temperature and humidity considering differences in soil moisture values only?
+
+### Task E 
+
+Fill out the feedback diagram in @fig-feedback_diagram_land to complete the task. Use the `Graph` interface in CLASS to explore the diagram relationships if needed. Place the arrows only between dependent variables. For the conventions of dashed versus solid lines, see @sec-feedback. 
+
+::: {#fig-feedback_diagram_land}
+```{mermaid}
+flowchart LR
+    A["$$SM$$"]
+    B["$$r_s$$"]
+    C["$$\lambda E$$"]
+    D["$$H$$"]
+    E["$$EF$$"]
+    F["$$T_s$$"]
+
+    A ~~~ B
+    B ~~~ C & D 
+    C & D ~~~ E
+    E ~~~ F 
+```
+Feedback diagram illustrating the effect of $SM$ conditions on $EF$ and surface temperature ($T_s$) via the concept of surface resistance $r_s$
+:::
+
+## Problem 2 {#sec-pract_2_problem_2}
+
+Use the daily EF values of the three experiments from @sec-pract_2_problem_1 exercise and build a scatter plot of $EF$ dependence on soil moisture $SM$. Use the x-axis to indicate the $SM$ value (i.e. $w_1 = w_2$ at the beginning of the simulation) and use the y-axis to mark the $EF$ (for a comparable figure from literature, see Figure 5 of @Seneviratne_2010). 
+
+To have a clearer view of the relation between $SM$ and $EF$, repeat the calculation of a daily $EF$ (as in @sec-daily_EF) for a range of $w_1 = w_2$ values between 0.1 and 0.4 complementing the values of 0.18, 0.21 and 0.31 from @sec-pract_2_problem_1. Add these extra data points to your $SM$-$EF$ graph. 
+
+
+### Task A
+
+According to @Seneviratne_2010, a linear relationship between $EF$ and $SM$ is a good approximation for $SM$ between critical and wilting point. Do the model results of CLASS confirm this hypothesis?
+
+### Task B
+
+Do you suspect the existence of some critical, i.e. maximum and minimum $EF$ values? If yes, what would the min and max $EF$ values be in your case?
+
+### Task C 
+The $EF$-$SM$ curve that you built is often used in classical hydrology and climate science to illustrate the coupling (strength of dependence) of $EF$ to $SM$, helping to differentiate between the regimes of water and energy limitation. 
+
+Examine your $EF$-$SM$ curve and characterize the $EF$-$SM$ relationship in terms of coupling regimes. Can you define three soil moisture ranges which differ in the strength of the coupling between $SM$ and $EF$ ?
+
+::: {.callout-tip}
+To define the $SM$ values which mark the transition between two regimes, reflect on the concepts of critical $SM$ and permanent wilting point. 
+::: 
+
+Additionally, decide in which regime the soil moisture conditions in West Flanders and East Wallonia fall. In which of the two regions is the EF-SM coupling the strongest? 
+
+## Additional influence of vegetation 
+
+Until now, only the effect of different soil moisture amounts on the partitioning of the energy available at the surface was considered. Remember, however, that soil moisture depletion is strongly regulated by both vegetation conditions and soil properties.
+
+- The soil regulates depletion of soil moisture via water infiltration and evaporation linked to **soil structure and porosity**.
+- Vegetation controls the depletion of soil moisture via its **root-stem-leaf system** functionality and its featured type of **response to the environmental conditions**. Hence, different vegetation and soil conditions will result in different $EF$ values, and hence, the $EF$-$SM$ relationship will change. 
+
+In CLASS, the effect of both soil and vegetation type can be explored. Under the `Surface` tab (subsection `Surface properties`), one can select:
+
+- Dominant vegetation cover: short grass (default), broadleaf trees and needleleaf trees
+- Soil type: sandy loam (default), sand and clay
+
+For the remainder of the practical, we'll focus on the effect of vegetation on the surface energy partition, while keeping the default soil type across simulations. 
+
+## Problem 3 {#sec-pract_2_problem_3}
+
+As mentioned above, the goal is to now explore the effect of different vegetation conditions on the partitioning of surface energy into heat and moisture fluxes and on the $EF$-$SM$ relationship. More specifically, the focus will be on the difference between short grass (reflective of the dominant vegetation cover in West Flanders) and broadleaf trees (reflective of the dominant vegetation cover in East Wallonia). 
+
+To set up the simulations, first clone experiment $C$ from @sec-pract_2_problem_1. This simulation is for short grass ($SG$). Now clone the latter experiment, and under the `Surface` tab, change the dominant vegetation cover from short grass to broadleaf trees, yielding a new experiment abbreviated by $BT$. By this change, key parameters influencing the calculation of $r_s$ are altered such as $LAI$ and $r_{s,min}$ parameter from the Jarvis-Stewart model (see introductory slides)^[For more details on the land surface model in CLASS, the reader is referred to Chapter 9 of @ABL_handbook, which can als be found on [Ufora](https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2563893/View)].  For simplicity, we only want to focus on the effects of vegetation type on $r_s$. Therefore, change following parameters for the $BT$ experiment in the `Adv. surf` tab:
+
+- Thermal conductivity of the skin layer $\Lambda$: change the value from 20 W m$^{-2}$ K$^{-1}$ (the default for broadleaf trees) to 5.9 W m$^{-2}$ K$^{-1}$ (the default value for short grass). In this way, $SG$ and $BT$ have the same $\Lambda$ and consequently the calculation of $G$ via^[Equation 9.33 from Chapter 9 of @ABL_handbook] $G = \Lambda (T_s - T_{\text{soil}1})$ (where $T_{\text{soil}1}$ is the surface soil temperature) is not influenced by the vegetation type. 
+- Fraction of surface covered by vegetation $C_{\text{veg}}$: change the value from 0.9 (the default for broadleaf trees) to 0.85 (the default value for short grass). In this way, $SG$ and $BT$ have the same $C_{\text{veg}}$ and consequently the calculation of the partitioning of $\lambda E$ between soil evaporation, transpiration and interception^[Equation 9.14 from Chapter 9 of @ABL_handbook] is only effected by the magnitude of these fluxes, not the fraction of vegetation cover. 
+
+### Task A
+
+By comparing $SG$ and $BT$, how did $EF$ changed over forest compared to over grass?
+
+### Task B 
+
+As mentioned above, the $LAI$ differs between $BT$ ($LAI = 5$) and $SG$ ($LAI = 2$). To isolate the effect of $LAI$, clone the $BT$ experiment, call it $BT_{LAI2}$ and change $LAI$ to 2 in the `Adv. surf` tab. By comparing $r_s$ and $\lambda E$ between $BT$ and $BT_{LAI2}$, explore following feedback loop by completing @fig-feedback_LAI_rs with dashed or full arrows (again following the convention from @sec-feedback).
+
+::: {#fig-feedback_LAI_rs}
+```{mermaid}
+flowchart LR
+    A["$$LAI$$"]
+    B["$$r_s$$"]
+    C["$$\lambda E$$"]
+    D["$$EF$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D  
+```
+
+Feedback diagram illustrating the effect of $LAI$ on surface fluxes
+:::
+
+### Task C 
+
+Another effect to explore is related to the optimal opening of the stomata in forest leaves and in grass leaves, which is captured by the $r_{s,min}$ parameter in CLASS. A higher $r_{s,min}$ value corresponds to more sensitive stomata (i.e. plants showing more isohydric behaviour, see theory lecture 7)
+
+Comparing $BT$ and $SG$, $r_{s,min}$ values are 200 s m$^{-1}$ and 110 s m$^{-1}$ respectively. To isolate the effect of $r_{s,min}$, clone the $BT$ experiment, call it $BT_{rsmin110}$ and change $r_{s,min}$ to 110 s m$^{-1}$ in the `Adv. surf` tab. By comparing $r_s$ and $\lambda E$ between $BT$ and $BT_{rsmin110}$, explore following feedback loop by completing @fig-feedback_rsmin_rs with dashed or full arrows. 
+
+::: {#fig-feedback_rsmin_rs}
+```{mermaid}
+flowchart LR
+    A["$$r_{s,min}$$"]
+    B["$$r_s$$"]
+    C["$$\lambda E$$"]
+    D["$$EF$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D  
+```
+
+Feedback diagram illustrating the effect of $r_{s,min}$ on surface fluxes
+:::
+
+### Task D
+Summarize the effect of the different vegetation cover types on surface fluxes by completing the feedback diagram in @fig-feedback_combined_rs. Which of the two feedback mechanisms covered above dominates the overall effect of going from $SG$ to $BT$?
+
+::: {#fig-feedback_combined_rs}
+```{mermaid}
+flowchart LR
+    A["$$SG \text{ to } BT$$"]
+    B["$$LAI$$"]
+    C["Isohydricity"]
+    D["$$r_s$$"]
+    E["$$r_{s,min}$$"]
+    F["$$\lambda E$$"]
+    G["$$H$$"]
+    H["$$EF$$"]
+
+    A ~~~ B & C
+    B & C ~~~ D & E
+    D & E ~~~~ F & G
+    F & G ~~~ H  
+```
+
+Feedback diagram illustrating the effect of different vegetation cover types on the surface fluxes via the concept of $r_s$
+:::
+
+## Problem 4
+
+After investigating the effect of SM (see @sec-pract_2_problem_1 and @sec-pract_2_problem_2) and vegetation (see @sec-pract_2_problem_3) in isolation, we're now interested in simulating the combined effect of high $SM$ and broadleaf tree vegetation cover, as present in East Wallonia. 
+
+### Task A
+
+To set up a model simulation reflecting the East Wallonia conditions, clone the $BT$ experiment, give it a new name ($EW$) and modify $w_1$ and $w_2$ in the `Adv. surf` tab to 0.31 (as defined in @tbl-surface_conditions). After simulation, calculate the daily $EF$ (as done in @sec-daily_EF). Next, add this point on the $EF$-$SM$ diagram created in @sec-pract_2_problem_1 and mark it in a way that differentiates as the point valid for $EW$. Does the forest covert shift the coupling relationship up (i.e. higher $EF$ for the same $SM$) or down?
+
+### Task B
+Complete @tbl-results and summarize the effect of different land surface conditions over the country (West Flanders versus East Wallonia) on partitioning of the surface energy into heat and moisture fluxes. Additionally, discuss the potential implications for the ABL temperature and the likelihood of heatwave development in the two regions 
+
+::: {.callout-tip}
+Remember that the $D$ experiment is reflective of West Flanders (dry and short grass), while the $EW$ experiment is reflective of East Wallonia (wet and broadleaf trees).
+::: 
+
+### Task C
+
+Does the presence of forests enhance or dampen the likelihood of higher temperatures over East Wallonia (as specified in @tbl-surface_conditions)?
+
+## The influence of the atmosphere on the surface fluxes
+
 
