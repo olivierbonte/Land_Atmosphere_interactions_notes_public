@@ -11,7 +11,7 @@ book:
   chapters:
     - index.qmd
     - practical_1.qmd
-    #- summary.qmd
+    - practical_2.qmd
     - references.qmd
   downloads: [pdf]
 

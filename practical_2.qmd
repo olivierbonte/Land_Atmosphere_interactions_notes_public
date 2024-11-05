@@ -1,0 +1,28 @@
+# Practical 2: Role of land state and vegetation
+
+In @sec-P1, the focus was on the effect of large-scale conditions on the daytime evolution of the boundary layer. With this understanding, we can now proceed to examine a second very important influence on the atmospheric boundary layer: **land surface conditions**. More specifically, CLASS will be used to investigate the following: 
+
+1. Explore land surface factors which
+control the magnitude of heat and moisture fluxes into the atmosphere
+2. Assess the possibility of a heatwave development over different regions of Belgium, which have different land covers and states. 
+
+## Description of the land surface conditions
+
+For this practical, we'll focus on Belgium during a drought onset situation. From @sec-P1, we know that in this case the large-scale atmospheric state is characterised by a stationary, anticyclone (see $AC$ on @fig-cycl_anticycl). 
+
+Although the large-scale atmospheric condition will be similar all over Belgium, this will not be te chase for the land conditions, which vary quite significantly over the country. This can lead to big differences in partitioning of incoming solar radiation to heat and moisture fluxes, and as a result, lead to higher air temperature and humidity in some regions relative to the others.
+
+The goal of this practical will be to use CLASS to explore the effect of different land surface conditions over Belgium on the radiation balance and magnitude of heat and moisture fluxes.
+
+More specifically, we'll focus on the difference in land cover and soil moisture (represented in CLASS in 2 layers with $w_1$ and $w_2$), as given by @tbl-surface_conditions. 
+
+| Region | $w_1 = w_2$ | Vegetation cover |
+|---|---|---|
+| West Flanders | 0.18 | Short grass |
+| East Wallonia | 0.31 | Broadleaf trees |   
+
+: Observed values of volumetric soil moisture content ($w_1 = w_2$) and dominant vegetation type for two Belgian region {#tbl-surface_conditions}
+
+### Task A
+Over the course of the practical, fill in following table. Test change. Test again
+
