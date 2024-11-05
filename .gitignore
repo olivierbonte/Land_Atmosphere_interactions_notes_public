@@ -8,3 +8,5 @@ _book/*
 .ipynb_checkpoints/
 __pycache__
 .jupyter_cache
+
+practical_1_files/*
