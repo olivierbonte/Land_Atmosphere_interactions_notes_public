@@ -3,7 +3,7 @@ Repository containing the practical material for the course of [Land-Atmosphere 
 
 ## Installation instructions
 
-Go to the [Quarto download page](https://quarto.org/docs/download/) and donwload Quarto for your operating system (OS). This repository was built using Quarto 1.5.57.
+Go to the [Quarto download page](https://quarto.org/docs/download/) and donwload Quarto for your operating system (OS). This repository was built using Quarto 1.6.32.
 
 Next, make sure you have (Mini)Conda installed (download links found [here](https://docs.anaconda.com/miniconda/)). Next open your command line interface (or Anaconda prompt) and type:
 ```
