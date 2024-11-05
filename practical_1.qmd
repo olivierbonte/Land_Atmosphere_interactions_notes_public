@@ -1,11 +1,4 @@
----
-title: "Practical 1: Atmospheric state and forcings"
-date: "2024-10-15"
-format:
-  html:
-    code-fold: true
-jupyter: python3
----
+# Practical 1: Atmospheric state and forcings {#sec-P1}
 
 Before conducting experiments with CLASS, you are first tasked to perform some introductory analysis on ABL theory.
 
