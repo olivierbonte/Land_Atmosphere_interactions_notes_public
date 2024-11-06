@@ -250,4 +250,58 @@ Does the presence of forests enhance or dampen the likelihood of higher temperat
 
 ## The influence of the atmosphere on the surface fluxes
 
+As mentioned in the introductory slides, it is important to remember that in this practical the mixed layer model is not activated. Consequently, the non-negligible influence of atmospheric conditions on the magnitude of the surface fluxes is ignored here. Without going into quantitative simulations, a non-exhaustive list of possible effects is given below:
 
+- $\langle \theta \rangle$ and $\langle q \rangle$ from the ABL influence the gradient of temperature and humidity between surface and atmosphere, hence altering the magnitude of $H$ and $\lambda E$ (think of bulk resistance approach from theory lecture 5)
+- Both wind speed and atmospheric stability influence the aerodynamic resistance $r_a$, which determines $H$ and $\lambda E$.
+- The plant stomata their functioning is dependent on several atmospheric states such as $T$, $q$ and $CO_2$.
+
+## Voluntary problem 5 
+
+There are many relationships still unexplored^[For the very curious, plenty of additional experiments can be found in @ABL_handbook]. In this **voluntary** problem, the effect of a higher air temperature on the partioning of the fluxes is investigated. Consistent with the other problems of this practical, the mixed layer model is still not used so that, making $\langle \theta \rangle$ constant throughout the duration of the simulation.
+
+### Task A 
+
+As a control experiment, $C$ from @sec-pract_2_problem_1 is used. The new experiment with a warmer ABL (named $WA$), has a $\langle \theta \rangle$ of 300 K. To make the comparison fair, we want to assure the following:
+
+1. Relative humidity ($RH$) should be the same for $WA$ and $C$. Recall from lecture 2 of the theory that $RH$ [%] is defined as $$RH = e/e^*$$ with $e$ vapour pressure [Pa] and $e^*$ the saturated vapour pressure [Pa]. The latter can be calculated in function of air temperature ($T$ in °C) with the Tetens equation: $$ e^* = 0.61 \exp \left( \frac{17.27T}{237.3 + T}\right) $$ Additionally, we know that $$q = 0.622 \frac e p$$ with $p$ the total atmospheric pressure [Pa]. With this information, calculate the $\langle q \rangle$ for $WA$ based on $\langle q \rangle$ for $C$ so that $RH$ is the same for both scenarios. 
+2. To assure a similar temperature gradient between the atmosphere and surface for both experiments, the (initial) values of $T_{\text{soil}1}$ and $T_{\text{soil}2}$ (the deep soil temperature)^[Intuitively,  also between $T_s$ and $\langle \theta \rangle$ a similar gradient should be maintained. The $T_s$ value set in the `Surface` tab (290K for $C$) does not influence the simulations however when the `Surface scheme` box is ticked (and hence the land surface model is run), as $T_s$ is calculated without needing an initial value and is based on (amongst others) $\langle \theta \rangle$ (see Equation 9.17 of @ABL_handbook).]. In $C$, the differences (i.e. "gradient") between $\langle \theta \rangle = 288$ K and $T_{\text{soil}1} = 285$ K and $T_{\text{soil}2} = 286$ K are 3 and 4 K respectively. Adapt $T_{\text{soil}1}$ and $T_{\text{soil}2}$ for $WA$ to have identical differences. 
+
+### Task B
+Once experiments $C$ and $WA$ are simulated, describe the diurnal variability of the $H$ and $\lambda E$ under these different $\langle \theta \rangle$ values. 
+
+Additionally, complete the feedback diagrams give in @fig-feedback_theta_1 and @fig-feedback_theta_2. Remember that $VPD = e^* - e$ stands for vapour pressure deficit. Based on your results, which one is dominating in this case? 
+
+::: {#fig-feedback_theta_1}
+```{mermaid}
+flowchart LR
+    A["$$\langle \theta \rangle$$"]
+    B["$$VPD$$"]
+    C["$$\lambda E$$"]
+    D["$$H$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D  
+```
+
+Feedback diagram illustrating the effect of $\langle \theta \rangle$ on the surface fluxes via evaporative demand
+:::
+
+::: {#fig-feedback_theta_2}
+```{mermaid}
+flowchart LR
+    A["$$\langle \theta \rangle$$"]
+    B["$$VPD$$"]
+    C["$$r_s$$"]
+    D["$$\lambda E$$"]
+    E["$$H$$"]
+
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D 
+    D ~~~ E  
+```
+
+Feedback diagram illustrating the effect of $\langle \theta \rangle$ on the surface fluxes via $r_s$ 
+:::
