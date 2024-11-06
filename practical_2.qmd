@@ -36,7 +36,7 @@ with $\lambda E$ the latent heat flux,  $R_n$ the net surface radiation and $G$ 
 | West Flanders | | |
 | East Wallonia | | | 
 
-: Temp {#tbl-results .striped}
+: Summarising the effect of $SM$ on atmospheric conditions. To be filled in after completing the problem in @sec-pract_2_problem_4. {#tbl-results .striped}
 
 ## Problem 1 {#sec-pract_2_problem_1}
 
@@ -229,7 +229,7 @@ flowchart LR
 Feedback diagram illustrating the effect of different vegetation cover types on the surface fluxes via the concept of $r_s$
 :::
 
-## Problem 4
+## Problem 4 {#sec-pract_2_problem_4}
 
 After investigating the effect of SM (see @sec-pract_2_problem_1 and @sec-pract_2_problem_2) and vegetation (see @sec-pract_2_problem_3) in isolation, we're now interested in simulating the combined effect of high $SM$ and broadleaf tree vegetation cover, as present in East Wallonia. 
 
