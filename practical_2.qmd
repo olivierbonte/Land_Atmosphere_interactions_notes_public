@@ -138,7 +138,7 @@ Additionally, decide in which regime the soil moisture conditions in West Flande
 
 ## Additional influence of vegetation 
 
-Until now, only the effect of different soil moisture amounts on the partitioning of the energy available at the surface was considered. Remember, however, that soil moisture depletion is strongly regulated by both vegetation conditions and soil properties.
+Until now, only the effect of different soil moisture amounts on the partitioning of the energy available at the surface was considered. Remember however that soil moisture depletion is strongly regulated by both vegetation conditions and soil properties.
 
 - The soil regulates depletion of soil moisture via water infiltration and evaporation linked to **soil structure and porosity**.
 - Vegetation controls the depletion of soil moisture via its **root-stem-leaf system** functionality and its featured type of **response to the environmental conditions**. Hence, different vegetation and soil conditions will result in different $EF$ values, and hence, the $EF$-$SM$ relationship will change. 
