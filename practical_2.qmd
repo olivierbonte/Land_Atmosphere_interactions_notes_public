@@ -210,6 +210,7 @@ Summarize the effect of the different vegetation cover types on surface fluxes b
 
 ::: {#fig-feedback_combined_rs}
 ```{mermaid}
+%%| fig-width: 6
 flowchart LR
     A["$$SG \text{ to } BT$$"]
     B["$$LAI$$"]
@@ -222,7 +223,7 @@ flowchart LR
 
     A ~~~ B & C
     B & C ~~~ D & E
-    D & E ~~~~ F & G
+    D & E ~~~ F & G
     F & G ~~~ H  
 ```
 
