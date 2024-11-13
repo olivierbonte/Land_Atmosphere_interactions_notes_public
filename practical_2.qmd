@@ -94,6 +94,7 @@ Fill out the feedback diagram in @fig-feedback_diagram_land to complete the task
 
 ::: {#fig-feedback_diagram_land}
 ```{mermaid}
+%%| fig-width: 6
 flowchart LR
     A["$$SM$$"]
     B["$$r_s$$"]
