@@ -51,7 +51,7 @@ To set up the experiments, start by opening the interactive window of CLASS mode
     - Tick the box `Radiation`
 - `Surface`:
     - Tick the box `Surface scheme`
-    - Tick the box `Surface layer`
+    - Do **not** tick^[The reasoning here is that in this way, we exclude the effect of roughness on the aerodynamic resistance] the box `Surface layer`
 
 From the surface tab, one can see that for this first set of experiments, it is assumed that the dominant land cover is short grass and that the soil type is sandy loam. 
 
