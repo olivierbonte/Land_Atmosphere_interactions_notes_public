@@ -254,13 +254,13 @@ Does the presence of forests enhance or dampen the likelihood of higher temperat
 
 As mentioned in the introductory slides, it is important to remember that in this practical the mixed layer model is not activated. Consequently, the non-negligible influence of atmospheric conditions on the magnitude of the surface fluxes is ignored here. Without going into quantitative simulations, a non-exhaustive list of possible effects is given below:
 
-- $\langle \theta \rangle$ and $\langle q \rangle$ from the ABL influence the gradient of temperature and humidity between surface and atmosphere, hence altering the magnitude of $H$ and $\lambda E$ (think of bulk resistance approach from theory lecture 5)
+- $\langle \theta \rangle$ and $\langle q \rangle$ from the ABL influence the gradient of temperature and humidity between surface and atmosphere, hence altering the magnitude of $H$ and $\lambda E$ (think of the bulk resistance approach from theory lecture 5)
 - Both wind speed and atmospheric stability influence the aerodynamic resistance $r_a$, which determines $H$ and $\lambda E$.
-- The plant stomata their functioning is dependent on several atmospheric states such as $T$, $q$ and $CO_2$.
+- The plant stomata their functioning is dependent on several atmospheric states such as $\langle \theta \rangle$, $\langle q \rangle$ and $CO_2$.
 
 ## Voluntary problem 5 
 
-There are many relationships still unexplored^[For the very curious, plenty of additional experiments can be found in @ABL_handbook]. In this **voluntary** problem, the effect of a higher air temperature on the partioning of the fluxes is investigated. Consistent with the other problems of this practical, the mixed layer model is still not used so that, making $\langle \theta \rangle$ constant throughout the duration of the simulation.
+There are many relationships still unexplored^[For the very curious, plenty of additional experiments can be found in @ABL_handbook]. In this **voluntary** problem, the effect of a higher air temperature on the partitioning of the fluxes is investigated. Consistent with the other problems of this practical, the mixed layer model is still not used, making $\langle \theta \rangle$ constant throughout the duration of the simulation.
 
 ### Task A 
 
