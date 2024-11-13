@@ -3,9 +3,15 @@ Repository containing the practical material for the course of [Land-Atmosphere 
 
 ## Installation instructions
 
-Go to the [Quarto download page](https://quarto.org/docs/download/) and donwload Quarto for your operating system (OS). This repository was built using Quarto 1.6.32.
+First, make a local copy of this repository using 
+```
+git clone https://github.com/olivierbonte/Land_Atmosphere_interactions_notes.git
+```
+or download as zip file and unzip. In each case, make sure to navigate inside the `Land_Atmosphere_interactions_notes` practical before executing any of the command line interface (CLI) instructions below. 
 
-Next, make sure you have (Mini)Conda installed (download links found [here](https://docs.anaconda.com/miniconda/)). Next open your command line interface (CLI) (or Anaconda prompt) and type:
+Go to the [Quarto download page](https://quarto.org/docs/download/) and download Quarto for your operating system (OS). This repository was built using Quarto 1.6.32.
+
+Next, make sure you have (Mini)Conda installed (download links found [here](https://docs.anaconda.com/miniconda/)). Next open your CLI (or Anaconda prompt) and type:
 ```
 conda env create -f environment.yml
 conda activate la_interactions_quarto
@@ -23,8 +29,8 @@ quarto install chromium
 There are several ways to use Quarto, but here [VS Code](https://code.visualstudio.com/Download) is used as interface. With VS Code installed for you OS, perform the following:
 
 1. Under extensions, install the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto). 
-2. Follow the instructions [here](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment) and select `la_interations_quarto`.
-3. To have a nice preview of your `.qmd` quarto document, use `Ctrl + Shift + k`. 
-4. To render the entire set of documents as one `.pdf`, type `quarto render` in the command line. 
+2. Follow the instructions [here](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment) and select `la_interations_quarto` as your Python interpreter for VS Code.
+3. To have a nice preview of your `.qmd` quarto document, use `Ctrl + Shift + k`. After modifying the `.qmd` document, use the same key combination to render the preview again. Alternatively, run `quarto preview` in the CLI (this should normally eliminate the need to use `Ctrl + Shift + k` repeatedly).
+4. To render the entire set of documents as one `.pdf`, type `quarto render` in the command line. Under the `_book` folder, you can then find the render `.pdf`. 
 
 General note for Mac users: `Ctrl` is `Cmd`. 
