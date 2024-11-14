@@ -768,7 +768,11 @@ class model:
             + self.cveg * self.cliq        * self.rho * self.Lv /  self.ra                * (self.dqsatdT * self.theta - self.qsat + self.q) + self.Lambda * self.Tsoil) \
             / (self.rho * self.cp / self.ra + self.cveg * (1. - self.cliq) * self.rho * self.Lv / (self.ra + self.rs) * self.dqsatdT \
             + (1. - self.cveg) * self.rho * self.Lv / (self.ra + self.rssoil) * self.dqsatdT + self.cveg * self.cliq * self.rho * self.Lv / self.ra * self.dqsatdT + self.Lambda)
-
+        # Extra information: the equation above is derived by:
+        #   1. Energy balance equation: Rn = G + H + LEveg + LEliq + LEsoil
+        #   2. Using the linear approximation of q_sat(Ts) (T = theta): qsat(Ts) = qsat(T) + dqsat/dT (Ts - T) 
+        #   3. By isolating Ts from the equation in 1 after filling in 2, the code above is obtained
+        
         esatsurf      = esat(self.Ts)
         self.qsatsurf = qsat(self.Ts, self.Ps)
 
