@@ -15,8 +15,12 @@ jobs:
             - name: Set up Quarto
               uses: quarto-dev/quarto-actions/setup@v2
 
+            - name: Install TinyTex
+              run: quarto install tinytex
+
             - name: Render and Publish 
               uses: quarto-dev/quarto-actions/publish@v2
               with:
                     target: quarto-pub
                     QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
+                    # render: "false"
