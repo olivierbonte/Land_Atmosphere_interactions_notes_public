@@ -33,5 +33,6 @@ format:
 # Allows caching of notebooks when previewing 
 execute:
   cache: true
+  freeze: auto
 
 
