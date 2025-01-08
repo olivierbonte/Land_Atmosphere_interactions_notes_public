@@ -9,7 +9,7 @@ git clone https://github.com/olivierbonte/Land_Atmosphere_interactions_notes.git
 ```
 or download as zip file and unzip. In each case, make sure to navigate inside the `Land_Atmosphere_interactions_notes` practical before executing any of the command line interface (CLI) instructions below. 
 
-Go to the [Quarto download page](https://quarto.org/docs/download/) and download Quarto for your operating system (OS). This repository was built using Quarto 1.6.32.
+Go to the [Quarto download page](https://quarto.org/docs/download/) and download Quarto for your operating system (OS). This repository was built using Quarto 1.6.39.
 
 Next, make sure you have (Mini)Conda installed (download links found [here](https://docs.anaconda.com/miniconda/)). Next open your CLI (or Anaconda prompt) and type:
 ```
