@@ -7,7 +7,7 @@ book:
     name: Olivier Bonte
     affiliation: Ghent University
     email: olivier.bonte@ugent.be
-  date: "2024-11-29"
+  date: today
   chapters:
     - index.qmd
     - practical_1.qmd
