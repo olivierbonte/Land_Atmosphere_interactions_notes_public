@@ -351,7 +351,7 @@ Table&nbsp;1.1: Readings of atmospheric temperature profile <a href="#fig-atm_pr
 <p>Remember that for a generic turbulent variable <span class="math inline">\(\psi\)</span>, Reynolds decomposition yields <span class="math display">\[
 \psi = \text{E}[\psi] + \psi' = \overline{\psi} + \psi'
 \]</span></p>
-<p>with <span class="math inline">\(\text{E}[\psi] = \overline{\psi}\)</span> the averaged value and <span class="math inline">\(\psi'\)</span> the random fluctuating part. In addition with the assumption of no mean veritcal wind velocity (<span class="math inline">\(\bar{w} = 0\)</span>, see introdutory slides), it follows that:</p>
+<p>with <span class="math inline">\(\text{E}[\psi] = \overline{\psi}\)</span> the averaged value and <span class="math inline">\(\psi'\)</span> the random fluctuating part. In addition with the assumption of no mean vertical wind velocity (<span class="math inline">\(\bar{w} = 0\)</span>, see introductory slides), it follows that:</p>
 <p><span class="math display">\[
 \begin{split}
 \text{cov} [w \psi] = E[(w - \text{E}[w])(\psi - \text{E}[\psi])]  \\
@@ -381,14 +381,14 @@ Tip
 <p>Use a programming language of your choice to perform the analysis.</p>
 </div>
 </div>
-<!-- For next year, let the students derive this formula of the covariance themsevles -->
+<!-- For next year, let the students derive this formula of the covariance themselves -->
 </section>
 </section>
 <section id="description-of-the-changes-in-large-scale-atmospheric-forcing" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="description-of-the-changes-in-large-scale-atmospheric-forcing"><span class="header-section-number">1.4</span> Description of the changes in large-scale atmospheric forcing</h2>
-<p>With the introductory analysis performed, it is now time to carry out sensitvity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see <a href="https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View"><code>CLASS_model_guide.pdf</code></a>. The model parameters are set to be representative if a site in the mid-latitude (approximately 50°N).</p>
+<p>With the introductory analysis performed, it is now time to carry out sensitivity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see <a href="https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View"><code>CLASS_model_guide.pdf</code></a>. The model parameters are set to be representative of a site in the mid-latitude (approximately 50°N).</p>
 <p>As mentioned in the introductory slides, the goal of this practical is to explore what effect the changing synoptic situation over Central Europe, from cyclonic (<span class="math inline">\(C\)</span>, low pressure) to anti-cyclonic (<span class="math inline">\(AC\)</span>, high pressure) – typical for a drought onset conditions - has on the evolution of the ABL state during the day, primarily its (potential) temperature (<span class="math inline">\(\theta\)</span>) and height (<span class="math inline">\(h\)</span>).</p>
-<p><a href="#tbl-free_tropo" class="quarto-xref">Table&nbsp;<span>1.2</span></a> and <a href="#fig-cycl_anticycl" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> summarise the change that have occured in the large-scale atmospheric forcing parameters in the free troposphere: ABL jump (inversion) (<span class="math inline">\(\Delta \theta\)</span> [K]), free tropospheric lapse rate (<span class="math inline">\(\gamma_{\theta}\)</span> [K/m]) and horizontal wind divergence ( <span class="math inline">\(\nabla \cdot \mathbf{u}_h\)</span> [1/s]).</p>
+<p><a href="#tbl-free_tropo" class="quarto-xref">Table&nbsp;<span>1.2</span></a> and <a href="#fig-cycl_anticycl" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> summarise the change that have occurred in the large-scale atmospheric forcing parameters in the free troposphere: ABL jump (inversion) (<span class="math inline">\(\Delta \theta\)</span> [K]), free tropospheric lapse rate (<span class="math inline">\(\gamma_{\theta}\)</span> [K/m]) and horizontal wind divergence ( <span class="math inline">\(\nabla \cdot \mathbf{u}_h\)</span> [1/s]).</p>
 <div id="tbl-free_tropo" class="striped quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-free_tropo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -412,7 +412,7 @@ Table&nbsp;1.2: Observed values for the three large-scale atmospheric forcing pa
 </thead>
 <tbody>
 <tr class="odd">
-<td>Cyclinic (<span class="math inline">\(C\)</span>)</td>
+<td>Cyclonic (<span class="math inline">\(C\)</span>)</td>
 <td>1.0</td>
 <td>0.001</td>
 <td>0</td>
@@ -438,7 +438,7 @@ Figure&nbsp;1.2: Sketch of vertical profiles of <span class="math inline">\(\the
 </figcaption>
 </figure>
 </div>
-<p>Before moving to the problems, the three considered governing equations as given in the introductory slides are repated: <span id="eq-state_theta"><span class="math display">\[
+<p>Before moving to the problems, the three considered governing equations as given in the introductory slides are repeated: <span id="eq-state_theta"><span class="math display">\[
 \frac{\partial\left\langle\theta\right\rangle}{\partial t}=\frac{\left(\overline{w^\prime\theta^\prime}\right)_s-\left(\overline{w^\prime\theta^\prime}\right)_e}{h}
 \tag{1.2}\]</span></span></p>
 <p><span id="eq-state_h"><span class="math display">\[
@@ -467,7 +467,7 @@ Figure&nbsp;1.3: Control setup of the initial ABL state with activated mixed-lay
 <p>Set up and run both experiments. Use the <code>Graph</code> option in the interactive window to plot and compare the results for the temporal evolution of <span class="math inline">\(h\)</span>, <span class="math inline">\(\langle \theta \rangle\)</span> and <span class="math inline">\(\Delta \theta\)</span>.</p>
 <section id="task-a-3" class="level3" data-number="1.5.1">
 <h3 data-number="1.5.1" class="anchored" data-anchor-id="task-a-3"><span class="header-section-number">1.5.1</span> Task A</h3>
-<p>By analyzing the evolution of <span class="math inline">\(\Delta \theta\)</span>, find at which time step (<span class="math inline">\(t_i\)</span>) <span class="math inline">\(\Delta \theta\)</span> starts increasing in the experiments. Describe the differences in the growth rate of <span class="math inline">\(h\)</span> and <span class="math inline">\(\langle \theta \rangle\)</span> before and after this time <span class="math inline">\(t_i\)</span> for both experiments. Use <a href="#eq-state_h" class="quarto-xref">Equation&nbsp;<span>1.3</span></a> and <a href="#eq-state_theta" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> to support your discussion.</p>
+<p>By analysing the evolution of <span class="math inline">\(\Delta \theta\)</span>, find at which time step (<span class="math inline">\(t_i\)</span>) <span class="math inline">\(\Delta \theta\)</span> starts increasing in the experiments. Describe the differences in the growth rate of <span class="math inline">\(h\)</span> and <span class="math inline">\(\langle \theta \rangle\)</span> before and after this time <span class="math inline">\(t_i\)</span> for both experiments. Use <a href="#eq-state_h" class="quarto-xref">Equation&nbsp;<span>1.3</span></a> and <a href="#eq-state_theta" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> to support your discussion.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

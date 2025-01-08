@@ -55,7 +55,7 @@ $$
 \psi = \text{E}[\psi] + \psi' = \overline{\psi} + \psi'
 $$ 
 
-with $\text{E}[\psi] = \overline{\psi}$ the averaged value and $\psi'$ the random fluctuating part. In addition with the assumption of no mean veritcal wind velocity ($\bar{w} = 0$, see introdutory slides), it follows that: 
+with $\text{E}[\psi] = \overline{\psi}$ the averaged value and $\psi'$ the random fluctuating part. In addition with the assumption of no mean vertical wind velocity ($\bar{w} = 0$, see introductory slides), it follows that: 
 
 $$
 \begin{split}
@@ -81,26 +81,26 @@ where $\rho = 1.2$ kg/m$^3$ is the air density and $\lambda = 2.45e6$ J/kg the l
 Use a programming language of your choice to perform the analysis.
 ::: 
 
-<!-- For next year, let the students derive this formula of the covariance themsevles -->
+<!-- For next year, let the students derive this formula of the covariance themselves -->
 
 ## Description of the changes in large-scale atmospheric forcing
 
-With the introductory analysis performed, it is now time to carry out sensitvity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see [`CLASS_model_guide.pdf`](https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View). The model parameters are set to be representative if a site in the mid-latitude (approximately 50°N).
+With the introductory analysis performed, it is now time to carry out sensitivity experiments with CLASS. For more information on how to use the graphical user interface of CLASS, see [`CLASS_model_guide.pdf`](https://ufora.ugent.be/d2l/le/content/1035474/viewContent/2536935/View). The model parameters are set to be representative of a site in the mid-latitude (approximately 50°N).
 
 As mentioned in the introductory slides, the goal of this practical is to explore what effect the changing synoptic situation over Central Europe, from cyclonic ($C$, low pressure) to anti-cyclonic ($AC$, high pressure) – typical for a drought onset conditions - has on the evolution of the ABL state during the day, primarily its (potential) temperature ($\theta$) and height ($h$).
 
-@tbl-free_tropo and @fig-cycl_anticycl summarise the change that have occured in the large-scale atmospheric forcing parameters in the free troposphere: ABL jump (inversion) ($\Delta \theta$ \[K\]), free tropospheric lapse rate ($\gamma_{\theta}$ \[K/m\]) and horizontal wind divergence ( $\nabla \cdot \mathbf{u}_h$ \[1/s\]).
+@tbl-free_tropo and @fig-cycl_anticycl summarise the change that have occurred in the large-scale atmospheric forcing parameters in the free troposphere: ABL jump (inversion) ($\Delta \theta$ \[K\]), free tropospheric lapse rate ($\gamma_{\theta}$ \[K/m\]) and horizontal wind divergence ( $\nabla \cdot \mathbf{u}_h$ \[1/s\]).
 
 | | $\Delta \theta$: ABL jump (inversion) \[K\] | $\gamma_{\theta}$: Free tropospheric lapse rate \[K/m\] | $\nabla \cdot \mathbf{u}_h$: Horizontal wind divergence \[1/s\] |
 |---|---|---|---|
-| Cyclinic ($C$) | 1.0 | 0.001 | 0 |
+| Cyclonic ($C$) | 1.0 | 0.001 | 0 |
 | Anti-cyclonic ($AC$) | 4.0 | 0.009 | 1e-5 |
 
 : Observed values for the three large-scale atmospheric forcing parameters for both cyclonic and anti-cyclonic conditions in the free troposphere {#tbl-free_tropo .striped}
 
 ![Sketch of vertical profiles of $\theta$ for both cyclonic and anti-cyclonic conditions](figures/cyclonic_vs_anticyclonic.png){#fig-cycl_anticycl}
 
-Before moving to the problems, the three considered governing equations as given in the introductory slides are repated: 
+Before moving to the problems, the three considered governing equations as given in the introductory slides are repeated: 
 $$
 \frac{\partial\left\langle\theta\right\rangle}{\partial t}=\frac{\left(\overline{w^\prime\theta^\prime}\right)_s-\left(\overline{w^\prime\theta^\prime}\right)_e}{h}
 $$ {#eq-state_theta}
@@ -129,7 +129,7 @@ Set up and run both experiments. Use the `Graph` option in the interactive windo
 
 ### Task A
 
-By analyzing the evolution of $\Delta \theta$, find at which time step ($t_i$) $\Delta \theta$ starts increasing in the experiments. Describe the differences in the growth rate of $h$ and $\langle \theta \rangle$ before and after this time $t_i$ for both experiments. Use @eq-state_h and @eq-state_theta to support your discussion.
+By analysing the evolution of $\Delta \theta$, find at which time step ($t_i$) $\Delta \theta$ starts increasing in the experiments. Describe the differences in the growth rate of $h$ and $\langle \theta \rangle$ before and after this time $t_i$ for both experiments. Use @eq-state_h and @eq-state_theta to support your discussion.
 
 ::: {.callout-tip}
 Save plots in the `Graph` interface in order to compare the temporal evolution of ABL variables against each other. Also include the plots later on in your report.
