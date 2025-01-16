@@ -147,7 +147,7 @@ Exploring vertical profiles of $\langle \theta \rangle$ in `Graph` interface may
 
 Summarise your conclusions about the influence of the larger morning temperature inversion on the evolution of the daytime ABL properties and fill out the feedback diagram in @fig-feedback_diagram below. Use solid lines with arrows to indicate positive relationships between any two variables, and dashed lines with arrows to show negative relationships. To clarify:
 
--   Positive relationship between A and B: increase in A leads to increase in
+-   Positive relationship between A and B: increase in A leads to increase in B
 -   Negative relationship between A and B: decrease in A leads to increase in B
 
 ::: {.callout-tip}
