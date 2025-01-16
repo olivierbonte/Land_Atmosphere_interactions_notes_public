@@ -174,7 +174,7 @@ Feedback diagram illustrating the effect of large-scale forcing conditions on th
 
 ## Problem 5 {#sec-problem_5}
 
-Another important variable that changed with the onset of the high pressure system ($AC$) was $\gamma_\theta$. Under conditions characterized by a high pressure system, warm air is slowly transported downward by subsidence, increasing the stability of the free troposphere, i.e. resulting in larger values of $\gamma_\theta$.
+Another important variable that changed with the onset of the high pressure system ($AC$) was $\gamma_\theta$. Under conditions characterized by a high pressure system, warm air is slowly transported downward by subsidence, increasing the stability of the free troposphere, i.e. resulting in larger values of $\gamma_\theta$. This is called a subsidence inversion (for more info on temperature inversions, see e.g. [here](https://www.meteo.be/nl/info/weerwoorden/inversie))
 
 Using this knowledge, design two experiments to study the influence of larger free-tropospheric lapse rate (higher stability). Using the values provided in @tbl-free_tropo, consider conditions before the onset of an anticyclonic situation (experiment $LO$ with $\gamma_{\theta,C}$) and another after the onset of a persistent high pressure system (experiment $HI$ $\gamma_{\theta, AC}$). For the rest, use the same initial set up as in @sec-problem_4, i.e. no moisture in the ABL and no diurnal cycle for both fluxes. Perform the simulations and compare the evolution of $h$, $\langle \theta \rangle$, and $\Delta \theta$ for the two experiments.
 
