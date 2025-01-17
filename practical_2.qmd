@@ -114,7 +114,7 @@ Feedback diagram illustrating the effect of $SM$ conditions on $EF$ and surface 
 
 ## Problem 2 {#sec-pract_2_problem_2}
 
-Use the daily EF values of the three experiments from @sec-pract_2_problem_1 exercise and build a scatter plot of $EF$ dependence on soil moisture $SM$. Use the x-axis to indicate the $SM$ value (i.e. $w_1 = w_2$ at the beginning of the simulation) and use the y-axis to mark the $EF$ (for a comparable figure from literature, see Figure 5 of @Seneviratne_2010). 
+Use the daily EF values of the three experiments from the exercises in @sec-pract_2_problem_1 and build a scatter plot of $EF$ dependence on soil moisture $SM$. Use the x-axis to indicate the $SM$ value (i.e. $w_1 = w_2$ at the beginning of the simulation) and use the y-axis to mark the $EF$ (for a comparable figure from literature, see Figure 5 of @Seneviratne_2010). 
 
 To have a clearer view of the relation between $SM$ and $EF$, repeat the calculation of a daily $EF$ (as in @sec-daily_EF) for a range of $w_1 = w_2$ values between 0.1 and 0.4 complementing the values of 0.18, 0.21 and 0.31 from @sec-pract_2_problem_1. Add these extra data points to your $SM$-$EF$ graph. 
 
