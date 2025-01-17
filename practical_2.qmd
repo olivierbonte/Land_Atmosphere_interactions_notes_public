@@ -10,9 +10,9 @@ control the magnitude of heat and moisture fluxes into the atmosphere
 
 For this practical, we'll focus on Belgium during a drought onset situation. From @sec-P1, we know that in this case the large-scale atmospheric state is characterised by a stationary, anticyclone (see $AC$ on @fig-cycl_anticycl). 
 
-Although the large-scale atmospheric condition will be similar all over Belgium, this will not be te chase for the land conditions, which vary quite significantly over the country. This can lead to big differences in partitioning of incoming solar radiation to heat and moisture fluxes, and as a result, lead to higher air temperature and humidity in some regions relative to the others.
+Although the large-scale atmospheric condition will be similar all over Belgium, this will not be te chase for the land conditions, which vary quite significantly over the country. This can lead to big differences in the partitioning of incoming solar radiation to heat and moisture fluxes, and as a result, lead to higher air temperature and humidity in some regions relative to others.
 
-The goal of this practical will be to use CLASS to explore the effect of different land surface conditions over Belgium on the radiation balance and magnitude of heat and moisture fluxes.
+The goal of this practical will be to use CLASS to explore the effect of different land surface conditions over Belgium on the radiation balance and the magnitude of heat and moisture fluxes.
 
 More specifically, we'll focus on the difference in land cover and soil moisture (represented in CLASS in 2 layers with $w_1$ and $w_2$), as given by @tbl-surface_conditions. 
 
@@ -29,6 +29,7 @@ Over the course of the practical, fill in @tbl-results. Remember that the evapor
 $$
 EF = \frac{\lambda E}{R_n - G}
 $$
+
 with $\lambda E$ the latent heat flux,  $R_n$ the net surface radiation and $G$ the ground heat flux (all in W/m$^2$). The strength of the coupling between $EF$ and soil moisture ($SM$) is characterised by $\frac{dEF}{dSM}$.
 
 | Region | daily $EF$ | SM-EF coupling regime | Likelihood of heatwave |
