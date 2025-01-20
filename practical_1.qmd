@@ -196,7 +196,7 @@ Summarize the role of $\Delta \theta$ and $\gamma_\theta$ as capping (limiting) 
 
 ## Problem 6
 
-Analogously to the experiments in @sec-problem_4 and @sec-problem_5, explore the sensitivity of the ABL evolution to the strong large-scale atmospheric subsidence $w_s$ developed under high-pressure system (see @fig-cycl_anticycl). Remember from the introductory slides that $w_s = (\nabla \cdot \mathbf{u}_h) h$.
+Analogously to the experiments in @sec-problem_4 and @sec-problem_5, explore the sensitivity of the ABL evolution to the strong large-scale atmospheric subsidence $w_s$ developed under high-pressure system (see @fig-cycl_anticycl). Remember from the introductory slides that $w_s = -(\nabla \cdot \mathbf{u}_h) h$.
 
 Again starting from @fig-control_exp, set up two experiments: one with zero wind divergence, and another with the divergence given in @tbl-free_tropo for $AC$. As before, support your answers below with the main state equations.
 
