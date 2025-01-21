@@ -241,12 +241,29 @@ Complete @tbl-results and summarize the effect of different land surface conditi
 Remember that the $D$ experiment is reflective of West Flanders (dry and short grass), while the $EW$ experiment is reflective of East Wallonia (wet and broadleaf trees).
 ::: 
 
-| Region | daily $EF$ | SM-EF coupling regime | Likelihood of heatwave |
-|---|---|---|---|
-| West Flanders | | |
-| East Wallonia | | | 
+```{python}
+# | label: tbl-results
+# | tbl-cap: Summarising the effect of $SM$ on atmospheric conditions. To be filled in after completing the problem in @sec-pract_2_problem_4.
+# | echo: false
 
-: Summarising the effect of $SM$ on atmospheric conditions. To be filled in after completing the problem in @sec-pract_2_problem_4. {#tbl-results .striped}
+from IPython.display import Markdown
+from tabulate import tabulate
+
+table = [
+    ["West Flanders", "", "", "", ""],
+    ["East Wallonia", "", "", "", ""],
+]
+Markdown(
+    tabulate(
+        table,
+        headers=[
+            "Daily $EF$",
+            "SM-EF coupling regime",
+            "Likelihood of heatwave",
+        ],
+    )
+)
+```
 
 ### Task C
 

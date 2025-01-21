@@ -26,17 +26,32 @@ Note that $p_0$ is the reference surface pressure of 1000 hPa, $R_d = R/MW_{\tex
 
 Complete the fourth column of @tbl-atm_profile with the three calculated $\theta$ values: at ABL height, and at parcels’ levels P1 and P2.
 
-```{=html}
-<!--- Note that the jupyter conversion fails when you have empty cells in your table,
-therefore fill it up using &#8203; (a zero width space) --->
-```
-| ​          | $P$: Pressure \[hPa\] | $T$: Absolute temperature \[K\] | $\theta$: Potential temperature read \[K\] | $\theta$: Potential temperature calculated \[K\] |
-|---|---|---|---|---|
-| top, ABL  | | ​| ​| |
-| Parcel P1 | | ​| ​| |
-| Parcel P2 | | ​| ​| |
+```{python}
+# | label: tbl-atm_profile
+# | tbl-cap: Readings of atmospheric temperature profile @fig-atm_profile
+# | echo: false
+# | tbl-colwidths: [20, 20, 20, 20, 20]
 
-: Readings of atmospheric temperature profile @fig-atm_profile {#tbl-atm_profile .striped}
+from IPython.display import Markdown
+from tabulate import tabulate
+
+table = [
+    ["top, ABL", "", "", "", ""],
+    ["Parcel P1", "", "", "", ""],
+    ["Parcel P2", "", "", "", ""],
+]
+Markdown(
+    tabulate(
+        table,
+        headers=[
+            "$P$: Pressure [hPa]",
+            "$T$: Absolute temperature [K]",
+            "$\\theta$ : Potential temperature read [K]",
+            "$\\theta$ : Potential temperature calculated [K]",
+        ],
+    )
+)
+```
 
 ### Task A
 
