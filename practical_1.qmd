@@ -14,18 +14,6 @@ Find the temperature inversion on @fig-atm_profile below (left panel) and note d
 
 Based on the right pane of @fig-atm_profile, also fill in the potential temperature in the third column of @tbl-atm_profile
 
-```{=html}
-<!--- Note that the jupyter conversion fails when you have empty cells in your table,
-therefore fill it up using &#8203; (a zero width space) --->
-```
-| ​          | $P$: Pressure \[hPa\] | $T$: Absolute temperature \[K\] | $\theta$: Potential temperature read \[K\] | $\theta$: Potential temperature calculated \[K\] |
-|---|---|---|---|---|
-| top, ABL  | | ​| ​| |
-| Parcel P1 | | ​| ​| |
-| Parcel P2 | | ​| ​| |
-
-: Readings of atmospheric temperature profile @fig-atm_profile {#tbl-atm_profile .striped}
-
 ## Problem 2
 
 The concept of potential temperature takes into account effects of compression or expansion on air parcel’s temperature, and hence, allows for a comparison of a parcel's buoyancy at any height. Use @eq-potential_temperature to calculate potential temperatures of the two parcels (P1 and P2) and the ABL top.
@@ -37,6 +25,18 @@ $$ {#eq-potential_temperature}
 Note that $p_0$ is the reference surface pressure of 1000 hPa, $R_d = R/MW_{\text{dry,air}} = \frac{8.314 \text{ J/(K mol)}}{29e-3 \text{ kg/mol}} \approx 287 \text{ J/(K kg)}$ the gas constant of dry air and $c_p = 1013 \text{ J/(K kg)}$ the specific heat of dry air at constant pressure. For the derivation of @eq-potential_temperature, the reader is referred to the supplementary material of Theory L2, more specifically to the section *Vertical pressure and temperature gradients* of @Shuttleworh_terrestrial_hydromet.
 
 Complete the fourth column of @tbl-atm_profile with the three calculated $\theta$ values: at ABL height, and at parcels’ levels P1 and P2.
+
+```{=html}
+<!--- Note that the jupyter conversion fails when you have empty cells in your table,
+therefore fill it up using &#8203; (a zero width space) --->
+```
+| ​          | $P$: Pressure \[hPa\] | $T$: Absolute temperature \[K\] | $\theta$: Potential temperature read \[K\] | $\theta$: Potential temperature calculated \[K\] |
+|---|---|---|---|---|
+| top, ABL  | | ​| ​| |
+| Parcel P1 | | ​| ​| |
+| Parcel P2 | | ​| ​| |
+
+: Readings of atmospheric temperature profile @fig-atm_profile {#tbl-atm_profile .striped}
 
 ### Task A
 

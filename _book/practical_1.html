@@ -274,6 +274,16 @@ Figure&nbsp;1.1: Observed atmospheric profiles of absolute temperature (red line
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="task-a"><span class="header-section-number">1.1.1</span> Task A</h3>
 <p>Find the temperature inversion on <a href="#fig-atm_profile" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> below (left panel) and note down in the <a href="#tbl-atm_profile" class="quarto-xref">Table&nbsp;<span>1.1</span></a> the height (in pressure) of the ABL top and the absolute temperature (in Kelvin) corresponding to that ABL height. Also, identify the pressure and absolute temperature for the two air parcels, P1 and P2. Note, that in absolute terms, temperature in the atmosphere decreases with height, i.e <span class="math inline">\(T_2 &lt; T_{top,ABL} &lt; T_1\)</span>.</p>
 <p>Based on the right pane of <a href="#fig-atm_profile" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>, also fill in the potential temperature in the third column of <a href="#tbl-atm_profile" class="quarto-xref">Table&nbsp;<span>1.1</span></a></p>
+</section>
+</section>
+<section id="problem-2" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">1.2</span> Problem 2</h2>
+<p>The concept of potential temperature takes into account effects of compression or expansion on air parcel’s temperature, and hence, allows for a comparison of a parcel’s buoyancy at any height. Use <a href="#eq-potential_temperature" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> to calculate potential temperatures of the two parcels (P1 and P2) and the ABL top.</p>
+<p><span id="eq-potential_temperature"><span class="math display">\[
+\theta = T \left( \frac{p_0}{p} \right)^{R_d/c_p}
+\tag{1.1}\]</span></span></p>
+<p>Note that <span class="math inline">\(p_0\)</span> is the reference surface pressure of 1000 hPa, <span class="math inline">\(R_d = R/MW_{\text{dry,air}} = \frac{8.314 \text{ J/(K mol)}}{29e-3 \text{ kg/mol}} \approx 287 \text{ J/(K kg)}\)</span> the gas constant of dry air and <span class="math inline">\(c_p = 1013 \text{ J/(K kg)}\)</span> the specific heat of dry air at constant pressure. For the derivation of <a href="#eq-potential_temperature" class="quarto-xref">Equation&nbsp;<span>1.1</span></a>, the reader is referred to the supplementary material of Theory L2, more specifically to the section <em>Vertical pressure and temperature gradients</em> of <span class="citation" data-cites="Shuttleworh_terrestrial_hydromet">Shuttleworh (<a href="references.html#ref-Shuttleworh_terrestrial_hydromet" role="doc-biblioref">2012</a>)</span>.</p>
+<p>Complete the fourth column of <a href="#tbl-atm_profile" class="quarto-xref">Table&nbsp;<span>1.1</span></a> with the three calculated <span class="math inline">\(\theta\)</span> values: at ABL height, and at parcels’ levels P1 and P2.</p>
 <!--- Note that the jupyter conversion fails when you have empty cells in your table,
 therefore fill it up using &#8203; (a zero width space) --->
 <div id="tbl-atm_profile" class="striped quarto-float quarto-figure quarto-figure-center anchored">
@@ -326,16 +336,6 @@ Table&nbsp;1.1: Readings of atmospheric temperature profile <a href="#fig-atm_pr
 </div>
 </figure>
 </div>
-</section>
-</section>
-<section id="problem-2" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">1.2</span> Problem 2</h2>
-<p>The concept of potential temperature takes into account effects of compression or expansion on air parcel’s temperature, and hence, allows for a comparison of a parcel’s buoyancy at any height. Use <a href="#eq-potential_temperature" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> to calculate potential temperatures of the two parcels (P1 and P2) and the ABL top.</p>
-<p><span id="eq-potential_temperature"><span class="math display">\[
-\theta = T \left( \frac{p_0}{p} \right)^{R_d/c_p}
-\tag{1.1}\]</span></span></p>
-<p>Note that <span class="math inline">\(p_0\)</span> is the reference surface pressure of 1000 hPa, <span class="math inline">\(R_d = R/MW_{\text{dry,air}} = \frac{8.314 \text{ J/(K mol)}}{29e-3 \text{ kg/mol}} \approx 287 \text{ J/(K kg)}\)</span> the gas constant of dry air and <span class="math inline">\(c_p = 1013 \text{ J/(K kg)}\)</span> the specific heat of dry air at constant pressure. For the derivation of <a href="#eq-potential_temperature" class="quarto-xref">Equation&nbsp;<span>1.1</span></a>, the reader is referred to the supplementary material of Theory L2, more specifically to the section <em>Vertical pressure and temperature gradients</em> of <span class="citation" data-cites="Shuttleworh_terrestrial_hydromet">Shuttleworh (<a href="references.html#ref-Shuttleworh_terrestrial_hydromet" role="doc-biblioref">2012</a>)</span>.</p>
-<p>Complete the fourth column of <a href="#tbl-atm_profile" class="quarto-xref">Table&nbsp;<span>1.1</span></a> with the three calculated <span class="math inline">\(\theta\)</span> values: at ABL height, and at parcels’ levels P1 and P2.</p>
 <section id="task-a-1" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="task-a-1"><span class="header-section-number">1.2.1</span> Task A</h3>
 <p>Now, imagine that you (dry adiabatically) descend parcels P1 and P2 down to the same level, for example the surface. Using the notion and formula of potential temperature, answer the question: which parcel will be warmer and more buoyant, P1 or P2?</p>

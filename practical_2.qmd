@@ -32,12 +32,6 @@ $$
 
 with $\lambda E$ the latent heat flux,  $R_n$ the net surface radiation and $G$ the ground heat flux (all in W/m$^2$). The strength of the coupling between $EF$ and soil moisture ($SM$) is characterised by $\frac{dEF}{dSM}$.
 
-| Region | daily $EF$ | SM-EF coupling regime | Likelihood of heatwave |
-|---|---|---|---|
-| West Flanders | | |
-| East Wallonia | | | 
-
-: Summarising the effect of $SM$ on atmospheric conditions. To be filled in after completing the problem in @sec-pract_2_problem_4. {#tbl-results .striped}
 
 ## Problem 1 {#sec-pract_2_problem_1}
 
@@ -246,6 +240,13 @@ Complete @tbl-results and summarize the effect of different land surface conditi
 ::: {.callout-tip}
 Remember that the $D$ experiment is reflective of West Flanders (dry and short grass), while the $EW$ experiment is reflective of East Wallonia (wet and broadleaf trees).
 ::: 
+
+| Region | daily $EF$ | SM-EF coupling regime | Likelihood of heatwave |
+|---|---|---|---|
+| West Flanders | | |
+| East Wallonia | | | 
+
+: Summarising the effect of $SM$ on atmospheric conditions. To be filled in after completing the problem in @sec-pract_2_problem_4. {#tbl-results .striped}
 
 ### Task C
 
