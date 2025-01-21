@@ -1,25 +1,25 @@
 on:
-    workflow_dispatch:
-    push:
-        branches: main
+  workflow_dispatch:
+  push:
+    branches: main
 
 name: Quarto Publish
 
 jobs:
-    build-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
-            
-            - name: Set up Quarto
-              uses: quarto-dev/quarto-actions/setup@v2
-              with:
-                version: 1.6.39
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Render and Publish 
-              uses: quarto-dev/quarto-actions/publish@v2
-              with:
-                    target: quarto-pub
-                    QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
-                    render: "false"
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.6.40
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: quarto-pub
+          QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
+          render: "false"
