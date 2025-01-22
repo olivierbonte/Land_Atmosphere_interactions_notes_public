@@ -81,7 +81,7 @@ You may need to adjust the axis limits on your graph, since the boundary values 
 ### Task D {#sec-daily_EF}
 Compare the graphs and discuss what percentage of the total energy available at the surface was used for evaporation or heat release in every experiment case on average? For that, calculate the daily $EF$ value for every experiment using its daily sums (or averages) of $\lambda E$, $R_n$ and $G$. 
 
-Based on this result, in which region, West Flanders or East Wallonia, would you expect larger increase in daytime air temperature and humidity considering differences in soil moisture values only?
+Based on this result, in which region, West Flanders or East Wallonia, would you expect larger increase in daytime air temperature and humidity considering differences in soil moisture values between experiments only?
 
 ### Task E 
 
@@ -157,7 +157,7 @@ To set up the simulations, first clone experiment $C$ from @sec-pract_2_problem_
 
 ### Task A
 
-By comparing $SG$ and $BT$, how did $EF$ changed over forest compared to over grass?
+By comparing $SG$ and $BT$, how did $EF$ change over forest compared to over grass?
 
 ### Task B 
 
