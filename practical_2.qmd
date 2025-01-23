@@ -72,7 +72,7 @@ When comparing the experiments, ignore the slight differences in the total energ
 
 ### Task C
 
-Calculate for each experiment the $EF$ parameter and plot its temporal evolution on a separate graphic for all three experiments.
+Calculate for each experiment the $EF$ parameter and plot its temporal evolution in a way that facilitates an easy comparison beteween the three experiments. 
 
 ::: {.callout-tip}
 You may need to adjust the axis limits on your graph, since the boundary values of $EF$ are too high due to the negative values of the fluxes around/just after sunrise.
