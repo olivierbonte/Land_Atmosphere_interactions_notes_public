@@ -4,7 +4,6 @@ project:
 book:
   title: "Land-Atmosphere Interactions: Practicals"
   subtitle: "Academic year: 2025 - 2026"
-  edition: "Academic year test"
   author: 
     name: Olivier Bonte
     affiliation: Ghent University
@@ -32,15 +31,7 @@ format:
     code-fold: show
   pdf:
     documentclass: scrreprt
-    include-in-header: 
-      text: |
-        \usepackage{fvextra}
-        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-        \titlehead{%
-          \includegraphics[height=3cm]{figures/logo_UGent_EN_RGB_2400_color.png}%
-          \hfill%
-          \includegraphics[height=3cm]{figures/icon_UGent_BW_EN_RGB_2400_color.png}%
-        }
+    include-in-header: preamble.tex
         
 # Allows caching of notebooks when previewing 
 execute:
