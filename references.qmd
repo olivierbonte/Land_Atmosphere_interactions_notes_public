@@ -2,3 +2,22 @@
 
 ::: {#refs}
 :::
+
+&nbsp;
+
+Below, you find information about the computational enviroment that was used to generate the rendered version of this document.
+
+```{python}
+#| echo: false
+import os
+import subprocess
+import tempfile
+temp_file = tempfile.NamedTemporaryFile(mode="w",delete=False, encoding="utf-8")
+subprocess.run(f"quarto check --log {temp_file.name}", shell=True)
+with open(temp_file.name, encoding="utf-8") as f:
+    lines = f.readlines()
+clean_lines = [line for line in lines if '\x1b' not in line] # Remove weird characters
+print("".join(clean_lines))
+```
+
+
