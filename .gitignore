@@ -1,4 +1,5 @@
 /.quarto/
+/_book/
 _freeze/
 .ipynb_checkpoints/
 __pycache__
