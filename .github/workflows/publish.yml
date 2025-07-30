@@ -14,12 +14,41 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          version: 1.6.40
+          version: 1.7.32
+          tinytex: true
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Setup Python with Miniconda
+        uses: conda-incubator/setup-miniconda@v3
         with:
-          target: quarto-pub
+          environment-file: environment.yml
+          activate-environment: la_interactions_quarto
+          auto-activate-base: false
+
+      - name: Install Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v2
+        with:
+          install-dependencies: true 
+
+      - name: Check Quarto and dependencies
+        shell: bash -el {0}
+        env:
+          QUARTO_CHROMIUM: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: quarto check
+
+      - name: Render and Publish 
+        shell: bash -el {0}
+        env:
+          QUARTO_CHROMIUM: ${{ steps.setup-chrome.outputs.chrome-path }}
           QUARTO_PUB_AUTH_TOKEN: ${{ secrets.QUARTO_PUB_AUTH_TOKEN }}
-          render: "false"
+        run: quarto publish quarto-pub --no-browser --no-prompt
+
+      - name: Save PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: _book/Land-Atmosphere-Interactions--Practicals.pdf
+          retention-days: 90
+          name: rendered_pdf_artifact
